@@ -8,6 +8,8 @@
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
+  /*background: radial-gradient(circle at top, #220033, #000);*/
+  color: white;
 }
 
 #header,
