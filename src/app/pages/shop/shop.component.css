@@ -1,0 +1,32 @@
+.shop {
+  padding: 2rem;
+  background: #1a001a;
+  color: #fff;
+  border-radius: 2rem;
+  text-align: center;
+}
+
+.products {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product {
+  background: #330033;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  width: 200px;
+  box-shadow: 0 0 10px #550055;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.product h3 {
+  margin: 0.5rem 0;
+}

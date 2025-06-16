@@ -1,0 +1,12 @@
+<div class="shop">
+  <h2>Shop</h2>
+  <div class="products">
+    @for (item of products; track item.id) {
+      <div class="product">
+        <img [src]="item.image" alt="{{ item.name }}">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.price }}</p>
+      </div>
+    }
+  </div>
+</div>
