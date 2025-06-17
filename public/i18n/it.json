@@ -2,5 +2,20 @@
   "home": "Home",
   "about": "About",
   "members": "Membri",
-  "contact": "Contatti"
+  "contact": "Contatti",
+  "mitch": {
+    "description": "La voce della band"
+  },
+  "francio": {
+    "description": "Il riffman"
+  },
+  "ingo": {
+    "description": "Dal passato oscuro"
+  },
+  "echoes": {
+    "description": "Il groove della galassia"
+  },
+  "fede": {
+    "description": "La sua bandana è leggenda"
+  }
 }

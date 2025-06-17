@@ -4,3 +4,12 @@
   align-items: center;
   padding: 1rem;
 }
+
+
+::ng-deep .p-menubar {
+  background: transparent !important;
+  border: unset !important;
+}
+
+.link-active {
+}

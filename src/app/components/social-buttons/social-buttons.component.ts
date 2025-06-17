@@ -10,13 +10,14 @@ import {TooltipModule} from 'primeng/tooltip';
   templateUrl: './social-buttons.component.html',
   styleUrl: './social-buttons.component.css'
 })
+
 export class SocialButtonsComponent {
 
   socialButtons: MenuItem[] = [
-    {label: 'instagram', icon: 'pi pi-instagram', url: 'https://www.instagram.com/knotpoet_/'},
-    {label: 'facebook', icon: 'pi pi-facebook'},
-    {label: 'spotify', icon: 'pi pi-spotify'},
-    {label: 'youtube', icon: 'pi pi-youtube'},
+    {label: 'instagram', url: 'https://www.instagram.com/knotpoet_/'},
+    {label: 'facebook'},
+    {label: 'spotify'},
+    {label: 'youtube'},
   ];
 
   openUrl(url: string | undefined) {
