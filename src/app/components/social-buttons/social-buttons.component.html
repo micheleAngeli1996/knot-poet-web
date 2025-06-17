@@ -1,1 +1,9 @@
-<p>social-buttons works!</p>
+<div class="social-buttons">
+  @for (socialButton of socialButtons; track socialButton.label) {
+    <p-button [icon]="socialButton.icon" [pTooltip]="socialButton.label! | translate" tooltipPosition="bottom" (onClick)="openUrl(socialButton.url)" text="true">
+      <!--<ng-template #icon>
+        <i class="fa-brands fa-spotify"></i>
+      </ng-template>-->
+    </p-button>
+  }
+</div>

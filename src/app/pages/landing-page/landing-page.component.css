@@ -5,6 +5,10 @@
 }
 
 .logo {
-  width: 100px;
+  height: 100%;
   filter: drop-shadow(0 0 5px #ff00ff);
+}
+
+.animate__animated.animate__fadeInUp {
+  --animate-duration: 5s;
 }

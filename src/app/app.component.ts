@@ -6,7 +6,7 @@ import {ScrollTopModule} from 'primeng/scrolltop';
 import {NgOptimizedImage} from '@angular/common';
 
 @Component({
-  selector: 'app-root',
+  selector: 'root',
   imports: [RouterOutlet, HeaderComponent, FooterComponent, ScrollTopModule, NgOptimizedImage],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

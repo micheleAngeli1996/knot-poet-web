@@ -9,6 +9,7 @@ import {providePrimeNG} from 'primeng/config';
 import {kpPreset} from '../../public/theme';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {platformBrowser} from '@angular/platform-browser';
+import {provideAnimations} from '@angular/platform-browser/animations';
 
 const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: HttpClient) => new TranslateHttpLoader(http, './i18n/', '.json');
 
@@ -17,6 +18,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({eventCoalescing: true}),
     provideRouter(routes),
+    provideAnimations(),
     importProvidersFrom([TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
