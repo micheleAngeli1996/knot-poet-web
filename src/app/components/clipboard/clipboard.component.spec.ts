@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BioGroupComponent } from './bio-group.component';
+import { ClipboardComponent } from './clipboard.component';
 
-describe('BioGroupComponent', () => {
-  let component: BioGroupComponent;
-  let fixture: ComponentFixture<BioGroupComponent>;
+describe('ClipboardComponent', () => {
+  let component: ClipboardComponent;
+  let fixture: ComponentFixture<ClipboardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BioGroupComponent]
+      imports: [ClipboardComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BioGroupComponent);
+    fixture = TestBed.createComponent(ClipboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

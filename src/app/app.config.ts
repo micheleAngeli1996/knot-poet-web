@@ -25,7 +25,7 @@ export const appConfig: ApplicationConfig = {
         useFactory: httpLoaderFactory,
         deps: [HttpClient],
       },
-      defaultLanguage: 'en'
+      defaultLanguage: navigator.language || 'en-US'
     })]),
     provideHttpClient(withInterceptorsFromDi()),
     providePrimeNG({

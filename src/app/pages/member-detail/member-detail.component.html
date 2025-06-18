@@ -1,1 +1,17 @@
-<p>bio-member works!</p>
+<div class="member-detail">
+  @if (member?.photo; as photo) {
+    <div style="mask-image: url(img/wallpapers/nebula-mask.png)" class="member-mask-image">
+      <img src="img/members/{{photo}}"/>
+    </div>
+  }
+  <div class="flex flex-col flex-grow member-card">
+    <p-card [style]="{ width: '100%', overflow: 'hidden' }">
+      <ng-template #title>{{ member?.nickname }}</ng-template>
+      <div>
+        <div>{{ 'name' | translate }}: {{ member?.fullname }}</div>
+        <div>{{ 'age' | translate }}: {{ member?.age }}</div>
+        <div>{{ 'instrument' | translate }}: {{ member?.instrument }}</div>
+        <div class="curriculum" [innerHTML]="member?.curriculum! | translate"></div>
+      </div>
+    </p-card>
+  </div>

@@ -1,0 +1,42 @@
+.member-detail {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  height: 100%;
+}
+
+.member-image {
+  height: 800px;
+  -webkit-mask-size: 108% 130%;
+  mask-size: 108% 130%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: left;
+  mask-position: left;
+  max-height: 100%;
+  flex: 1;
+  transform: scale(0.6);
+  background-repeat: no-repeat;
+}
+
+.member-mask-image {
+  mask-size: 70%;
+  mask-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+.curriculum {
+  margin: 1rem 0;
+  font-size: large;
+}
+
+.member-card {
+  margin-right: 4rem;
+  text-align: justify;
+}
+
+::ng-deep .p-card {
+  /*background: transparent !important;*/
+  /*box-shadow: none !important;*/
+}

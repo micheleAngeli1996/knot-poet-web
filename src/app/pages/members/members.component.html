@@ -1,42 +1,24 @@
 <div class="members">
-  <div class="band-image">
-    <img src="img/members/band.png" width="50%"/>
+  <h1 class="title">{{'members_title' | translate}}</h1>
+  <div class="band-image" style="mask-image: url(img/wallpapers/nebula-mask.png)">
+    <img src="img/members/band.png" width="100%"/>
   </div>
   <div class="members-list">
-    <div class="member-row">
-      <ng-container *ngTemplateOutlet="memberShortDescr; context: {$implicit: francio}" />
-      <ng-container *ngTemplateOutlet="memberShortDescr; context: {$implicit: ingo}" />
-    </div>
-    <div class="member-single">
-      <ng-container *ngTemplateOutlet="memberShortDescr; context: {$implicit: mitch}" />
-    </div>
-    <div class="member-row">
-      <ng-container *ngTemplateOutlet="memberShortDescr; context: {$implicit: echoes}" />
-      <ng-container *ngTemplateOutlet="memberShortDescr; context: {$implicit: fede}" />
-    </div>
+    @for (member of members; track member.id) {
+      <ng-container *ngTemplateOutlet="memberCard; context: {$implicit: member}"></ng-container>
+    }
   </div>
 </div>
 
-<ng-template #memberShortDescr let-member>
-  <div class="member-short-descr">
-    <p-avatar image="img/members/{{member.photo}}" class="member-avatar"
-              size="xlarge" shape="circle"/>
-    <div class="member-presentation">
-      <span class="nickname">{{ member.nickname }}</span>
-    </div>
-  </div>
-</ng-template>
-
-<ng-template #memberTooltip let-member>
-  <div class="member-container">
-    <p-avatar image="img/members/{{member.photo}}" class="member-avatar"
-              size="xlarge" shape="circle"/>
-    <div class="member-presentation">
-      <span class="nickname">{{ member.nickname }}</span>
-      <span class="fullname">{{ member.name + " " + member.surname }}</span>
-      <div class="member-description">
-        {{ member.description | translate }}
+<ng-template #memberCard let-member>
+  <p-card styleClass="cursor-pointer" (click)="goToMemberDetail(member.id)">
+    <ng-template #title> {{ member.nickname }}</ng-template>
+    <ng-template #subtitle> {{ member.fullname }}</ng-template>
+    <div class="flex flex-wrap flex-col align-items-center justify-content-center">
+      <div class="member-description">{{ member.description | translate }}</div>
+      <div style="mask-image: url(img/wallpapers/nebula-mask.png)" class="member-mask-image">
+        <img src="img/members/{{member.photo}}" width="300px"/>
       </div>
     </div>
-  </div>
+  </p-card>
 </ng-template>

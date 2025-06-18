@@ -1,10 +1,11 @@
-import {Component} from '@angular/core';
-import {Member} from '../../models/Members';
+import {Component, inject} from '@angular/core';
 import {AvatarModule} from 'primeng/avatar';
 import {CardModule} from 'primeng/card';
 import {ScrollPanelModule} from 'primeng/scrollpanel';
 import {TranslatePipe} from '@ngx-translate/core';
 import {NgTemplateOutlet} from '@angular/common';
+import {ActivatedRoute, Router} from '@angular/router';
+import {MembersService} from '../../services/members.service';
 
 @Component({
   selector: 'members',
@@ -13,59 +14,20 @@ import {NgTemplateOutlet} from '@angular/common';
   styleUrl: './members.component.css'
 })
 export class MembersComponent {
+  private router = inject(Router);
+  private route = inject(ActivatedRoute);
+  private membersService = inject(MembersService);
 
-  members: Member[] = [
-    {
-      id: 'MA',
-      age: 29,
-      name: 'Michele',
-      surname: 'Angeli',
-      description: 'mitch.description',
-      instrument: 'voice',
-      nickname: 'Mitch',
-      photo: 'mitch.png'
-    },
-    {
-      id: 'FM',
-      age: 30,
-      name: 'Francesco',
-      surname: 'Martinelli',
-      description: 'francio.description',
-      instrument: 'guitar',
-      nickname: 'Francio',
-      photo: 'francio.png'
-    },
-    {
-      id: 'I.',
-      age: 30,
-      name: 'Ingemar',
-      surname: '...',
-      description: 'ingo.description',
-      instrument: 'guitar',
-      nickname: 'Ingo',
-      photo: 'ingo.png'
-    },
-    {
-      id: 'MC',
-      age: 30,
-      name: 'Michele',
-      surname: 'Ciccia',
-      description: 'echoes.description',
-      instrument: 'bass',
-      nickname: 'Echoes',
-      photo: 'echoes.png'
-    },
-    {
-      id: 'FD',
-      age: 50,
-      name: 'Federico',
-      surname: '...',
-      description: 'fede.description',
-      instrument: 'drum',
-      nickname: 'Fede',
-      photo: 'fede.png'
-    },
-  ]
+  constructor() {
+    console.log(navigator.language)
+  }
+  get members() {
+    return this.membersService.members;
+  }
+
+  goToMemberDetail(memberId: string) {
+    this.router.navigate(['member', memberId], {relativeTo: this.route.parent});
+  }
 
   get mitch() {
     return this.members.find(m => m.id == 'MA');
@@ -76,7 +38,7 @@ export class MembersComponent {
   }
 
   get ingo() {
-    return this.members.find(m => m.id == 'I.');
+    return this.members.find(m => m.id == 'I');
   }
 
   get echoes() {

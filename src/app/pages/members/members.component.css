@@ -3,39 +3,32 @@
   flex-direction: row;
   flex-wrap: wrap;
   height: 100%;
+  overflow: auto;
+  justify-content: center;
+}
+
+.title {
+  filter: drop-shadow(0 0 5px #ff00ff);
 }
 
 .band-image {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 2rem;
-}
-
-.band-image img {
+  mask-size: 108% 130%;
+  mask-repeat: no-repeat;
+  mask-position: left;
   max-height: 100%;
-  width: auto;
-  object-fit: cover;
+  width: 100%;
+  background-size: cover;
+  transform: scale(0.8);
 }
 
 .members-list {
   display: flex;
-  flex-direction: column;
-  gap: 2em;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6em;
   justify-content: center;
   flex: 1;
-  padding: 0 2rem;
-  overflow: auto;
-  height: 100%;
-}
-
-.member-container {
-  display: flex;
-  flex-direction: row;
-  filter: drop-shadow(0 0 5px #ff00ff);
-  /*border: 1px solid white;*/
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .member-row {
@@ -46,24 +39,8 @@
   justify-content: space-between;
 }
 
-.member-single {
-  display: flex;
-  flex-direction: row;
-  filter: drop-shadow(0 0 5px #ff00ff);
-  padding: 1rem;
-  justify-content: center;
-}
-
 .member-avatar {
   filter: drop-shadow(0 0 5px white);
-  transform: scale(1);
-  transition: transform 1s;
-  cursor: pointer;
-}
-
-.member-avatar:hover {
-  transform: scale(1.5);
-  transition: transform 1s;
 }
 
 .member-short-descr {
@@ -71,6 +48,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transform: scale(1);
+  transition: transform 1s;
+  cursor: pointer;
+}
+
+.member-short-descr:hover {
+  transform: scale(1.5);
+  transition: transform 1s;
 }
 
 .member-short-descr > .member-presentation {
@@ -82,6 +67,15 @@
   flex-direction: column;
 }
 
+.member-description {
+  margin: 1rem 0;
+}
+
+.member-mask-image {
+  mask-size: 120%;
+  mask-position: center;
+}
+
 .nickname {
   font-weight: bold;
   margin-bottom: 0.2rem;
@@ -91,4 +85,52 @@
   color: var(--p-text-muted-color);
   font-size: small;
   margin-bottom: 0.5rem;
+}
+
+#member-desc-MA {
+  position: absolute;
+  bottom: 120px;
+  left: 55%;
+}
+
+#member-desc-FM {
+  position: absolute;
+  bottom: 140px;
+  left: 70%;
+}
+
+#member-desc-I {
+  position: absolute;
+  bottom: 150px;
+  left: 25%;
+}
+
+#member-desc-MC {
+  position: absolute;
+  bottom: 400px;
+  left: 80%;
+}
+
+#member-desc-FD {
+  position: absolute;
+  bottom: 70px;
+  left: 40%;
+}
+
+::ng-deep .p-card {
+  width: 400px;
+  max-width: 400px;
+  height: 500px;
+  max-height: 500px;
+  transform: scale(1);
+  transition: 0.5s;
+  /*box-shadow: 0px 0px 12px 6px rgba(255,79,227,0.67);*/
+  z-index: 0;
+  position: relative;
+}
+
+::ng-deep .p-card:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  z-index: 99;
 }

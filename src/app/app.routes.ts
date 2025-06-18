@@ -1,11 +1,12 @@
 import {Routes} from '@angular/router';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
+import {LandingPageComponent} from './pages/landing-page/landing-page.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {
     path: 'home',
-    loadComponent: () => import('./pages/landing-page/landing-page.component').then(m => m.LandingPageComponent)
+    component: LandingPageComponent
   },
   {
     path: 'shop',
@@ -17,17 +18,19 @@ export const routes: Routes = [
   },
   {
     path: 'about',
-    loadComponent: () => import('./pages/bio-group/bio-group.component').then(m => m.BioGroupComponent)
+    loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent)
   },
   {
     path: 'members',
-    loadComponent: () => import('./pages/members/members.component').then(m => m.MembersComponent),
-    children: [
-      {
-        path: 'member/:id',
-        loadChildren: () => import('./pages/member-detail/member-detail.component').then(m => m.MemberDetailComponent)
-      }
-    ]
+    loadComponent: () => import('./pages/members/members.component').then(m => m.MembersComponent)
+  },
+  {
+    path: 'member/:id',
+    loadComponent: () => import('./pages/member-detail/member-detail.component').then(m => m.MemberDetailComponent)
+  },
+  {
+    path: 'news',
+    loadComponent: () => import('./pages/news/news.component').then(m => m.NewsComponent)
   },
   {path: '**', component: PageNotFoundComponent}
 ];

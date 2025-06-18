@@ -1,8 +1,12 @@
 <div class="footer">
-  <div>
-    {{ 'email' | translate }}: {{ "knotpoet@gmail.com" }}
+  <p>&copy; 2023 Knot Poet. {{ 'all_rights_reserved' | translate }}.</p>
+  <p-divider [layout]="'vertical'"></p-divider>
+  <div class="footer-element">
+    <a [href]="'mailto:{{mail}}'" class="p-button-link mx-2">{{ mail }}</a>
+    <clipboard [value]="mail"/>
   </div>
-  <div>
-    {{ 'phone' | translate }}: 333123457
+  <p-divider [layout]="'vertical'"></p-divider>
+  <div class="footer-element"> {{ phone }}
+    <clipboard [value]="phone"/>
   </div>
 </div>
