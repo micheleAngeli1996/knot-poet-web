@@ -1,12 +1,13 @@
-<div class="container">
-  <img ngSrc="img/wallpapers/nebulosa.png" fill class="nebulosa-bg kenburns-bottom">
-  <div id="header">
+<div class="container" style="background-image: radial-gradient(circle at bottom, transparent, #0000009e), url(img/wallpapers/nebulosa.png)">
+  <!---->
+  <!--<img ngSrc="img/wallpapers/nebulosa-xl.png" fill class="nebulosa-bg" fetchpriority="high">-->
+  <div class="layout-header">
     <header></header>
   </div>
-  <div id="content">
+  <main class="layout-content">
     <router-outlet></router-outlet>
-  </div>
-  <div id="footer">
+  </main>
+  <div class="layout-footer">
     <footer></footer>
   </div>
 </div>

@@ -1,22 +1,9 @@
 .member-detail {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   overflow: auto;
   height: 100%;
-}
-
-.member-image {
-  height: 800px;
-  -webkit-mask-size: 108% 130%;
-  mask-size: 108% 130%;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: left;
-  mask-position: left;
-  max-height: 100%;
-  flex: 1;
-  transform: scale(0.6);
-  background-repeat: no-repeat;
 }
 
 .member-mask-image {
@@ -32,11 +19,6 @@
 }
 
 .member-card {
-  margin-right: 4rem;
+  padding: 0 4rem;
   text-align: justify;
-}
-
-::ng-deep .p-card {
-  /*background: transparent !important;*/
-  /*box-shadow: none !important;*/
 }

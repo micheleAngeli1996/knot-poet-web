@@ -1,8 +1,9 @@
+<div style="background-image: url(img/members/band.png)"></div>
 <div class="members">
-  <h1 class="title">{{'members_title' | translate}}</h1>
-  <div class="band-image" style="mask-image: url(img/wallpapers/nebula-mask.png)">
-    <img src="img/members/band.png" width="100%"/>
-  </div>
+  <h2 class="title">{{ 'members_title' | translate }}</h2>
+  <!-- <div class="band-image" style="mask-image: url(img/wallpapers/nebula-mask.png)">
+     <img src="img/members/band.png" width="100%"/>
+   </div>-->
   <div class="members-list">
     @for (member of members; track member.id) {
       <ng-container *ngTemplateOutlet="memberCard; context: {$implicit: member}"></ng-container>
@@ -11,7 +12,9 @@
 </div>
 
 <ng-template #memberCard let-member>
-  <p-card styleClass="cursor-pointer" (click)="goToMemberDetail(member.id)">
+  <p-card
+    styleClass="cursor-pointer"
+    (click)="goToMemberDetail(member.id)">
     <ng-template #title> {{ member.nickname }}</ng-template>
     <ng-template #subtitle> {{ member.fullname }}</ng-template>
     <div class="flex flex-wrap flex-col align-items-center justify-content-center">

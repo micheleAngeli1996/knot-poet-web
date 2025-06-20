@@ -4,10 +4,17 @@
   align-items: center;
 }
 
-::ng-deep .p-menubar {
+:host(::ng-deep .p-menubar) {
   background: transparent !important;
   border: unset !important;
 }
 
+
 .link-active {
+  color: var(--p-button-primary-active-background);
+}
+
+:host(::ng-deep .p-button-link),
+:host(::ng-deep .p-button-link:not(:disabled):hover .p-button-label){
+  text-decoration: none !important;
 }
