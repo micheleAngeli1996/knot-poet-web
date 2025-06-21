@@ -1,6 +1,5 @@
-.contact-container {
+::ng-deep .p-card {
   padding: 2rem;
-  background: rgba(30, 0, 40, 0.85);
   color: white;
   border-radius: 2rem;
   max-width: 600px;

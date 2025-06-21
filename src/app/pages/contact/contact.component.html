@@ -1,9 +1,22 @@
-<div class="contact-container">
-  <h2>Contatti</h2>
-  <form>
-    <input type="text" placeholder="Nome">
-    <input type="email" placeholder="Email">
-    <textarea placeholder="Messaggio"></textarea>
-    <button type="submit">Invia</button>
+<p-card>
+  <ng-template #header>{{ 'contacts' | translate }}</ng-template>
+  <form [formGroup]="emailFromGroup" (ngSubmit)="onSubmit()">
+
+    <p-floatlabel>
+      <input type="text" pInputText formControlName="name"/>
+      <label for="name">{{ 'name' | translate }}</label>
+    </p-floatlabel>
+    <p-floatlabel>
+      <input type="text" pInputText formControlName="emailToReplay"/>
+      <label for="emailToReplay">{{ 'emailToReplay' | translate }}</label>
+    </p-floatlabel>
+    <p-floatlabel>
+      <textarea pInputTextarea formControlName="message"></textarea>
+      <label for="messagge">{{ 'messagge' | translate }}</label>
+    </p-floatlabel>
+
+    <p-button type="submit" [label]="'send' | translate"></p-button>
   </form>
-</div>
+</p-card>
+
+<p-toast position="bottom-center"/>

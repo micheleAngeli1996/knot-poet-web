@@ -7,10 +7,12 @@
 }
 
 .member-mask-image {
-  mask-size: 70%;
+  mask-size: 60%;
   mask-position: center;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 50%;
 }
 
 .curriculum {
