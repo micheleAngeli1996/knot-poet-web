@@ -4,15 +4,20 @@
   flex-wrap: wrap;
   overflow: auto;
   height: 100%;
+  align-items: center;
+}
+
+.member-image {
+  width: 40rem;
 }
 
 .member-mask-image {
-  mask-size: 60%;
+  mask-size: 40rem;
   mask-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  margin: 2rem;
 }
 
 .curriculum {

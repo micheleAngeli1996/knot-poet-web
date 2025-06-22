@@ -1,5 +1,5 @@
 import {ApplicationConfig, importProvidersFrom, provideZoneChangeDetection} from '@angular/core';
-import {provideRouter, withDebugTracing, withInMemoryScrolling, withViewTransitions} from '@angular/router';
+import {provideRouter, withInMemoryScrolling, withViewTransitions} from '@angular/router';
 
 import {routes} from './app.routes';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
@@ -18,7 +18,6 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     provideRouter(
       routes,
-      withDebugTracing(),
       withViewTransitions(),
       withInMemoryScrolling({
         scrollPositionRestoration: 'enabled',
