@@ -1,21 +1,29 @@
-<p-card>
-  <ng-template #header>{{ 'contactUs' | translate }}</ng-template>
-  <form [formGroup]="emailFromGroup" (ngSubmit)="onSubmit()" class="email-form">
-    <p-floatlabel>
-      <input type="text" pInputText formControlName="name"/>
-      <label for="name">{{ 'name' | translate }}</label>
-    </p-floatlabel>
-    <p-floatlabel>
-      <input type="text" pInputText formControlName="emailToReplay"/>
-      <label for="emailToReplay">{{ 'emailToReplay' | translate }}</label>
-    </p-floatlabel>
-    <p-floatlabel>
-      <textarea pInputTextarea formControlName="message" [autoResize]="true"></textarea>
-      <label for="messagge">{{ 'message' | translate }}</label>
-    </p-floatlabel>
+<div class="flex flex-row">
+  <div class="col">
+    <p-card>
+      <ng-template #header>{{ 'contactUs' | translate }}</ng-template>
+      <form [formGroup]="emailFromGroup" (ngSubmit)="onSubmit()" class="email-form">
+        <p-floatlabel>
+          <input type="text" pInputText formControlName="name" class="form-control"/>
+          <label for="name">{{ 'name' | translate }}</label>
+        </p-floatlabel>
+        <p-floatlabel>
+          <input type="text" pInputText formControlName="emailToReplay" class="form-control"/>
+          <label for="emailToReplay">{{ 'emailToReplay' | translate }}</label>
+        </p-floatlabel>
+        <p-floatlabel>
+          <textarea pInputTextarea formControlName="message" [autoResize]="true" class="form-control"></textarea>
+          <label for="messagge">{{ 'message' | translate }}</label>
+        </p-floatlabel>
 
-    <p-button type="submit" [label]="'send' | translate"></p-button>
-  </form>
-</p-card>
+        <p-button type="submit" [label]="'send' | translate"></p-button>
+      </form>
+    </p-card>
+  </div>
+
+  <div class="col">
+    <img src="img/members/band.png" class="band-image">
+  </div>
+</div>
 
 <p-toast position="bottom-center"/>

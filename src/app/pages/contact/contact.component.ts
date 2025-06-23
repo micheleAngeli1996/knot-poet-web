@@ -37,12 +37,6 @@ export class ContactComponent {
         {
           next: response => {
             console.log(response);
-            /*this.messageService.add({
-              summary: 'Success',
-              severity: 'success',
-              detail: 'Message sent',
-              life: 3000
-            });*/
             this.emailFromGroup.reset();
           },
           error: error => {

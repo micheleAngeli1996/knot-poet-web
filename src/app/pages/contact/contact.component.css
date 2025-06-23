@@ -21,6 +21,14 @@ button:hover {
   background: #cc0099;
 }
 
+.col {
+  width: 50%;
+}
+
+.band-image {
+  width: 100%;
+}
+
 ::ng-deep .p-card {
   padding: 2rem;
   color: white;
