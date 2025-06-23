@@ -32,7 +32,7 @@ export class ContactComponent {
       const name = this.emailFromGroup!.get('name')!.value;
       const message = this.emailFromGroup!.get('message')!.value;
       const headers = new HttpHeaders({'Content-Type': 'application/json'});
-      this.http.post('https://formspree.io/f/xeokldav',
+      this.http.post('https://formspree.io/f/xqabydzl',
         {name, replyto: emailToReplay, message}, {'headers': headers}).subscribe(
         {
           next: response => {
