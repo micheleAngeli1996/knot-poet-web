@@ -9,16 +9,20 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {FloatLabel} from 'primeng/floatlabel';
 import {MessageService} from 'primeng/api';
 import {Toast} from 'primeng/toast';
+import {ClipboardComponent} from '../../components/clipboard/clipboard.component';
+import {Divider} from 'primeng/divider';
+import {ContactService} from '../../services/contact.service';
 
 @Component({
   selector: 'contact',
-  imports: [CardModule, InputTextModule, TextareaModule, TranslatePipe, ReactiveFormsModule, FormsModule, Button, FloatLabel, Toast],
+  imports: [CardModule, InputTextModule, TextareaModule, TranslatePipe, ReactiveFormsModule, FormsModule, Button, FloatLabel, Toast, ClipboardComponent, Divider],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
   private http = inject(HttpClient);
   private messageService = inject(MessageService);
+  contactService = inject(ContactService);
 
   emailFromGroup = new FormGroup({
     'name': new FormControl(),

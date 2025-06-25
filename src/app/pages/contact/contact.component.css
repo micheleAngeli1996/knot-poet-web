@@ -23,10 +23,21 @@ button:hover {
 
 .col {
   width: 50%;
+  display: flex;
+  align-items: center;
 }
 
-.band-image {
+.contact-card {
   width: 100%;
+}
+
+.contact-title {
+  color: var(--p-text-muted-color);
+}
+
+.dividerContent {
+  filter: drop-shadow(0 0 5px #ff00ff);
+  font-weight: bold;
 }
 
 ::ng-deep .p-card {
@@ -35,9 +46,21 @@ button:hover {
   border-radius: 2rem;
   max-width: 600px;
   margin: 3rem;
+}
+
+::ng-deep .p-card-header,
+::ng-deep .p-card-content {
   text-align: center;
+}
+
+::ng-deep #directContactCard .p-card-content {
+  font-size: large;
 }
 
 ::ng-deep .p-floatlabel {
   margin-bottom: 2rem;
+}
+
+:host(::ng-deep .p-divider-content) {
+  background: unset !important;
 }

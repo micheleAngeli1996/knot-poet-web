@@ -1,12 +1,6 @@
 <div class="footer">
   <p>&copy; 2023 Knot Poet. {{ 'all_rights_reserved' | translate }}.</p>
-  <p-divider [layout]="'vertical'"></p-divider>
-  <div class="footer-element">
-    <a [href]="'mailto:{{mail}}'" class="p-button-link mx-2" target="_blank">{{ mail }}</a>
-    <clipboard [value]="mail"/>
-  </div>
-  <p-divider [layout]="'vertical'"></p-divider>
-  <div class="footer-element"> {{ phone }}
-    <clipboard [value]="phone"/>
-  </div>
+  <!--<p-divider [layout]="'vertical'" styleClass="footer-divider"></p-divider>-->
+  <div class="divider"></div>
+  <a (click)="goToPrivacyPolicy()">Privacy Policy</a>
 </div>

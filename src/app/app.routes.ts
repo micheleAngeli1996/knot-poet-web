@@ -29,8 +29,12 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/member-detail/member-detail.component').then(m => m.MemberDetailComponent)
   },
   {
+    path: 'privacy-policy',
+    loadComponent: () => import('./pages/privacy-policy/privacy-policy.component').then(m => m.PrivacyPolicyComponent)
+  },
+  {
     path: 'news',
     loadComponent: () => import('./pages/news/news.component').then(m => m.NewsComponent)
-  }/*,
-  {path: '**', component: PageNotFoundComponent}*/
+  },
+  {path: '**', component: PageNotFoundComponent}
 ];

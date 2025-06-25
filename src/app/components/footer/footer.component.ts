@@ -1,16 +1,23 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {TranslatePipe} from '@ngx-translate/core';
-import {ClipboardComponent} from '../clipboard/clipboard.component';
 import {ButtonModule} from 'primeng/button';
 import {Divider} from 'primeng/divider';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'footer',
-  imports: [TranslatePipe, ClipboardComponent, ButtonModule, Divider],
+  imports: [TranslatePipe, ButtonModule, Divider],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-  phone = "+39 333123457";
-  mail = "knotpoet@gmail.com";
+  private router = inject(Router);
+
+  goToPrivacyPolicy() {
+    const url = this.router.serializeUrl(
+      this.router.createUrlTree(['/privacy-policy'])
+    );
+
+    window.open(url, '_blank');
+  }
 }

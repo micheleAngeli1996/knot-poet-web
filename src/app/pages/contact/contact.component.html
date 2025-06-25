@@ -1,7 +1,7 @@
 <div class="flex flex-row">
   <div class="col">
-    <p-card>
-      <ng-template #header>{{ 'contactUs' | translate }}</ng-template>
+    <p-card class="contact-card">
+      <ng-template #header> {{ 'contactUs' | translate }}</ng-template>
       <form [formGroup]="emailFromGroup" (ngSubmit)="onSubmit()" class="email-form">
         <p-floatlabel>
           <input type="text" pInputText formControlName="name" class="form-control"/>
@@ -21,8 +21,28 @@
     </p-card>
   </div>
 
+  <p-divider layout="vertical">
+    <div class="dividerContent">{{ 'contactDivider' | translate }}</div>
+  </p-divider>
+
   <div class="col">
-    <img src="img/members/band.png" class="band-image">
+    <p-card class="contact-card" id="directContactCard">
+      <ng-template #header>
+        <div class="contact-title">
+          {{ 'directContact' | translate }}
+        </div>
+      </ng-template>
+      <div>
+        @let mail = contactService.mail;
+        <a [href]="'mailto:{{mail}}'" class="p-button-link mx-2" target="_blank">{{ mail }}</a>
+        <clipboard [value]="mail"/>
+      </div>
+      <div>
+        @let phone = contactService.phone;
+        {{ phone }}
+        <clipboard [value]="phone"/>
+      </div>
+    </p-card>
   </div>
 </div>
 

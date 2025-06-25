@@ -1,22 +1,22 @@
 .footer {
   display: flex;
   flex-direction: row;
-  gap: 0.3rem;
   justify-content: center;
-  padding: 0.3rem;
-}
-
-.footer-element {
-  display: flex;
-  justify-content: start;
   align-items: center;
+  font-size: smaller;
+  gap: 0.3rem;
 }
 
 a {
   text-decoration: none;
-  margin: 0 0.5rem;
 }
 
 a:hover {
+  cursor: pointer;
   text-decoration: underline;
+}
+
+.divider {
+  border-right: 2px solid #c445dd;
+  height: 1rem;
 }
