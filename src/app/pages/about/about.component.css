@@ -6,13 +6,12 @@
 }
 
 .member-mask-image {
-  mask-size: 70%;
+  mask-size: 80%;
   mask-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem;
-  animation: mask-scale 5s ease-in-out;
+  animation: mask-scale 4s ease-out;
   mask-repeat: no-repeat;
 }
 
@@ -21,6 +20,21 @@
     mask-size: 0;
   }
   to {
-    mask-size: 70%;
+    mask-size: 80%;
   }
+}
+
+.about-band {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.band-description {
+  font-size: large;
+  filter: drop-shadow(0 0 5px #ff00ff);
+  text-align: center;
 }
