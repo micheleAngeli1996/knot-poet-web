@@ -6,7 +6,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "public",
+    "public": "dist/knot-poet-website/browser",
     "ignore": [
       "firebase.json",
       "**/.*",

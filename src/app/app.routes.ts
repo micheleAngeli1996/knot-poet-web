@@ -31,6 +31,6 @@ export const routes: Routes = [
   {
     path: 'news',
     loadComponent: () => import('./pages/news/news.component').then(m => m.NewsComponent)
-  },
-  {path: '**', component: PageNotFoundComponent}
+  }/*,
+  {path: '**', component: PageNotFoundComponent}*/
 ];
