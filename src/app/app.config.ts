@@ -9,9 +9,10 @@ import {kpPreset} from '../../public/theme';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {provideAnimations} from '@angular/platform-browser/animations';
 
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import {provideClientHydration, withIncrementalHydration} from '@angular/platform-browser';
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -37,6 +38,7 @@ const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: Http
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({eventCoalescing: true}),
+    provideClientHydration(withIncrementalHydration()),
     provideAnimations(),
     provideRouter(
       routes,

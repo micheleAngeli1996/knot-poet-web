@@ -6,7 +6,7 @@ import {Member} from '../models/Members';
 })
 export class ContactService {
   private _phone = "+39 3496711382";
-  private _mail = "knotpoet@gmail.com";
+  private _mail = "info@knotpoet.com";
 
   get phone() {
     return this._phone;

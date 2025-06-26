@@ -12,17 +12,21 @@
   position: fixed;
   width: 100%;
   z-index: 999;
-  height: 110px;
   background: linear-gradient(#000, #00000061);
 }
 
 .layout-content {
   flex: 1 1 auto;
   overflow: auto;
-  margin-top: 110px;
+  margin-top: 90px;
+  margin-bottom: 45px;
 }
 
-.nebulosa-bg {
-  z-index: -1;
-  opacity: 0.5;
+.layout-footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background: linear-gradient(#00000061, #000);
 }

@@ -59,3 +59,8 @@ html, body {
 .p-card .form-control {
   background: #ae59c082 !important;
 }
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
