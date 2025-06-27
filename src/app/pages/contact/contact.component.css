@@ -77,3 +77,7 @@ button:hover {
 :host(::ng-deep .p-divider-content) {
   background: unset !important;
 }
+
+.pad-y {
+  padding: 1rem 0;
+}

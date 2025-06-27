@@ -1,10 +1,4 @@
 .members {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
@@ -93,11 +87,9 @@
 }
 
 :host(::ng-deep .p-card) {
-  width: 400px !important;
   max-width: 400px !important;
   height: 500px !important;
   max-height: 500px !important;
-  /*box-shadow: 0px 0px 12px 6px rgba(255,79,227,0.67) !important;*/
   z-index: 0 !important;
   position: relative !important;
 }
@@ -106,4 +98,8 @@
   transform: scale(1.1) !important;
   transition: 0.5s;
   z-index: 99 !important;
+}
+
+:host(::ng-deep .p-card-body) {
+  padding: 1rem 0 !important;
 }
