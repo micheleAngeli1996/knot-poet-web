@@ -21,6 +21,10 @@ button:hover {
   background: #cc0099;
 }
 
+.contact-container {
+  height: 100vh;
+}
+
 .col {
   width: 50%;
   display: flex;
@@ -35,17 +39,22 @@ button:hover {
   color: var(--p-text-muted-color);
 }
 
+.contact-subtitle {
+  padding: 0 3rem;
+  text-align: center;
+}
+
 .dividerContent {
   filter: drop-shadow(0 0 5px #ff00ff);
   font-weight: bold;
 }
 
 ::ng-deep .p-card {
-  padding: 2rem;
+  padding: 2rem 0;
   color: white;
   border-radius: 2rem;
   max-width: 600px;
-  margin: 3rem;
+  margin: auto;
 }
 
 ::ng-deep .p-card-header,

@@ -1,49 +1,63 @@
-<div class="flex flex-row">
-  <div class="col">
-    <p-card class="contact-card">
-      <ng-template #header> {{ 'contactUs' | translate }}</ng-template>
-      <form [formGroup]="emailFromGroup" (ngSubmit)="onSubmit()" class="email-form">
-        <p-floatlabel>
-          <input type="text" pInputText formControlName="name" class="form-control"/>
-          <label for="name">{{ 'name' | translate }}</label>
-        </p-floatlabel>
-        <p-floatlabel>
-          <input type="text" pInputText formControlName="emailToReplay" class="form-control"/>
-          <label for="emailToReplay">{{ 'emailToReplay' | translate }}</label>
-        </p-floatlabel>
-        <p-floatlabel>
-          <textarea pInputTextarea formControlName="message" [autoResize]="true" class="form-control"></textarea>
-          <label for="messagge">{{ 'message' | translate }}</label>
-        </p-floatlabel>
+<div class="flex flex-col align-items-center justify-content-center"
+     [ngClass]="{'contact-container': !isPortraitOrientation}">
 
-        <p-button type="submit" [label]="'send' | translate"></p-button>
-      </form>
-    </p-card>
+  <div>
+    <h2>{{ 'contactTitle' | translate }}</h2>
   </div>
 
-  <p-divider layout="vertical">
-    <div class="dividerContent">{{ 'contactDivider' | translate }}</div>
-  </p-divider>
+  <div class="contact-subtitle">
+    <h3>{{ 'contactUsAnytime' | translate }}</h3>
+  </div>
 
-  <div class="col">
-    <p-card class="contact-card" id="directContactCard">
-      <ng-template #header>
-        <div class="contact-title">
-          {{ 'directContact' | translate }}
+  <div class="flex flex-grow width-full"
+       [ngClass]="{'flex-col align-items-center': isPortraitOrientation, 'flex-row': !isPortraitOrientation }">
+    <div [ngClass]="{'col': !isPortraitOrientation}" class="width-full">
+      <p-card class="contact-card">
+        <ng-template #header> {{ 'contactUs' | translate }}</ng-template>
+        <form [formGroup]="emailFromGroup" (ngSubmit)="onSubmit()" class="email-form">
+          <p-floatlabel>
+            <input type="text" pInputText formControlName="name" class="form-control"/>
+            <label for="name">{{ 'name' | translate }}</label>
+          </p-floatlabel>
+          <p-floatlabel>
+            <input type="text" pInputText formControlName="emailToReplay" class="form-control"/>
+            <label for="emailToReplay">{{ 'emailToReplay' | translate }}</label>
+          </p-floatlabel>
+          <p-floatlabel>
+            <textarea pInputTextarea formControlName="message" [autoResize]="true" class="form-control"></textarea>
+            <label for="messagge">{{ 'message' | translate }}</label>
+          </p-floatlabel>
+
+          <p-button type="submit" [label]="'send' | translate"></p-button>
+        </form>
+      </p-card>
+    </div>
+
+    <p-divider [layout]="!isPortraitOrientation ? 'vertical' : 'horizontal'">
+      <div class="dividerContent">{{ 'contactDivider' | translate }}</div>
+    </p-divider>
+
+    <div [ngClass]="{'col': !isPortraitOrientation}" class="width-full">
+      <p-card class="contact-card" id="directContactCard">
+        <ng-template #header>
+          <div class="contact-title">
+            {{ 'directContact' | translate }}
+          </div>
+        </ng-template>
+        <div>
+          @let mail = contactService.mail;
+          <a [href]="'mailto:{{mail}}'" class="p-button-link mx-2" target="_blank">{{ mail }}</a>
+          <clipboard [value]="mail"/>
         </div>
-      </ng-template>
-      <div>
-        @let mail = contactService.mail;
-        <a [href]="'mailto:{{mail}}'" class="p-button-link mx-2" target="_blank">{{ mail }}</a>
-        <clipboard [value]="mail"/>
-      </div>
-      <div>
-        @let phone = contactService.phone;
-        {{ phone }}
-        <clipboard [value]="phone"/>
-      </div>
-    </p-card>
+        <div>
+          @let phone = contactService.phone;
+          {{ phone }}
+          <clipboard [value]="phone"/>
+        </div>
+      </p-card>
+    </div>
   </div>
+
 </div>
 
 <p-toast position="bottom-center"/>

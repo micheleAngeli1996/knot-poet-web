@@ -3,7 +3,6 @@
   color: white;
   height: 100%;
   filter: drop-shadow(0 0 5px #ff00ff);
-  animation: flicker 5s linear 5s alternate;
 }
 
 .logo {
@@ -12,15 +11,4 @@
 
 .animate__animated.animate__fadeInUp {
   --animate-duration: 5s;
-}
-/* Flickering animation */
-@keyframes flicker {
-
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
-    filter: drop-shadow(0 0 5px #ff00ff);
-  }
-
-  20%, 24%, 55% {
-    filter: none;
-  }
 }

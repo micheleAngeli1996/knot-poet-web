@@ -1,21 +1,26 @@
-import {Component} from '@angular/core';
-import {MenubarModule} from 'primeng/menubar';
+import {Component, inject} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {MenuItem} from 'primeng/api';
 import {TranslateModule} from '@ngx-translate/core';
 import {ButtonModule} from 'primeng/button';
+import {NgClass} from '@angular/common';
+import {BreakpointService} from '../../services/breakpoint.service';
 
 @Component({
   selector: 'navbar',
-  imports: [MenubarModule, RouterModule, TranslateModule, ButtonModule],
+  imports: [RouterModule, TranslateModule, ButtonModule, NgClass],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  private breakpointService = inject(BreakpointService);
   items: MenuItem[] = [
-    {label: 'home', route: 'home'},
-    {label: 'about', route: 'about'},
-    {label: 'members', route: 'members'},
-    {label: 'contact', route: 'contact'}
+    {label: 'home', url: 'home'},
+    {label: 'about', url: 'about'},
+    {label: 'contact', url: 'contact'}
   ];
+
+  get isPortraitOrientation() {
+    return this.breakpointService.isPortraitOrientation();
+  }
 }

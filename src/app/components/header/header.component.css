@@ -4,3 +4,19 @@
   justify-content: space-between;
   padding: 0.5rem 0;
 }
+
+.menu-button {
+  margin-right: 1rem;
+}
+
+:host(::ng-deep .p-button) {
+  background: transparent !important;
+  border: unset !important;
+  color: white !important;
+}
+
+.transparent-button {
+  background: transparent !important;
+  border: unset !important;
+  color: white !important;
+}

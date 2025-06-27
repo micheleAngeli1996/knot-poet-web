@@ -6,32 +6,27 @@ export const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {
     path: 'home',
-    title: 'Home',
+    title: 'Knot Poet Official - Home',
     component: LandingPageComponent
   },
   {
     path: 'shop',
-    title: 'Shop',
+    title: 'Knot Poet Official - Shop',
     loadComponent: () => import('./pages/shop/shop.component').then(m => m.ShopComponent)
   },
   {
     path: 'contact',
-    title: 'Contact',
+    title: 'Knot Poet Official - Contact',
     loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent)
   },
   {
     path: 'about',
-    title: 'About',
+    title: 'Knot Poet Official - About',
     loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent)
   },
   {
-    path: 'members',
-    title: 'Members',
-    loadComponent: () => import('./pages/members/members.component').then(m => m.MembersComponent)
-  },
-  {
-    path: 'members/:id',
-    loadComponent: () => import('./pages/member-detail/member-detail.component').then(m => m.MemberDetailComponent)
+    path: 'about/:id',
+    loadComponent: () => import('./pages/about-detail/about-detail.component').then(m => m.AboutDetailComponent)
   },
   {
     path: 'privacy-policy',

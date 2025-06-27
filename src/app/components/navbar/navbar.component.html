@@ -1,9 +1,9 @@
-<div class="navbar">
-  <p-menubar [model]="items">
-    <ng-template #item let-item>
-      <a [routerLink]="item.route" routerLinkActive="link-active" class="mr-2 p-menubar-item-link">
-        <span class="ml-2">{{ item.label | translate }}</span>
+<div class="navbar" [ngClass]="{'flex-col height-full': isPortraitOrientation}">
+  @for (item of items; track item.id) {
+    <div class="navbar-item">
+      <a [routerLink]="item.url" routerLinkActive="link-active" class="p-menubar-item-link">
+        <span class="ml-2">{{ item.label! | translate }}</span>
       </a>
-    </ng-template>
-  </p-menubar>
+    </div>
+  }
 </div>

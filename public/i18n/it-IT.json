@@ -3,6 +3,8 @@
   "about": "About",
   "members": "Membri",
   "contact": "Contatti",
+  "contactTitle": "Contattaci!",
+  "contactUsAnytime": "Puoi contattarci in qualsiasi momento! Siamo disponibili per complimenti, consigli, placidi insulti e tanto altro!",
   "contactUs": "Scrivici pure, ti risponderemo!",
   "age": "Età",
   "name": "Nome",
@@ -18,7 +20,7 @@
   "guitar": "Chitarra",
   "drum": "Batteria",
   "bass": "Basso",
-  "members_title": "Una fusione di suono poetico e aggressivo",
+  "aboutTitle": "Una fusione di suono poetico e aggressivo",
   "bandDescription": "Knot Poet nasce dalla fusione di sonorità oniriche e atmosfere metal.<br /> Ogni brano è un viaggio nel subconscio,\n    guidato da liriche evocative e arrangiamenti potenti.",
   "mitch": {
     "shortDescription": "La voce della band",

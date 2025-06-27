@@ -12,16 +12,21 @@ import {Toast} from 'primeng/toast';
 import {ClipboardComponent} from '../../components/clipboard/clipboard.component';
 import {Divider} from 'primeng/divider';
 import {ContactService} from '../../services/contact.service';
+import {BreakpointService} from '../../services/breakpoint.service';
+import {NgClass} from '@angular/common';
 
 @Component({
   selector: 'contact',
-  imports: [CardModule, InputTextModule, TextareaModule, TranslatePipe, ReactiveFormsModule, FormsModule, Button, FloatLabel, Toast, ClipboardComponent, Divider],
+  imports: [CardModule, InputTextModule, TextareaModule, TranslatePipe,
+    ReactiveFormsModule, FormsModule, Button, FloatLabel, Toast, ClipboardComponent, Divider, NgClass],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
   private http = inject(HttpClient);
   private messageService = inject(MessageService);
+  private breakpointService = inject(BreakpointService);
+
   contactService = inject(ContactService);
 
   emailFromGroup = new FormGroup({
@@ -68,5 +73,9 @@ export class ContactComponent {
         life: 3000
       })
     }
+  }
+
+  get isPortraitOrientation() {
+    return this.breakpointService.isPortraitOrientation();
   }
 }

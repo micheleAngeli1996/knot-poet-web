@@ -21,6 +21,14 @@ html, body {
   cursor: pointer;
 }
 
+.width-full {
+  width: 100%;
+}
+
+.height-full {
+  height: 100%;
+}
+
 .flex {
   display: flex;
 }
@@ -49,6 +57,10 @@ html, body {
   justify-content: center;
 }
 
+.justify-content-between {
+  justify-content: space-between;
+}
+
 .p-card {
   background: rgba(0, 0, 20, 0.8) !important;
   transform: scale(1) !important;
@@ -63,4 +75,20 @@ html, body {
 ::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+.flickering-animation {
+  animation: flicker 5s linear 5s alternate;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    filter: drop-shadow(0 0 5px #ff00ff);
+  }
+
+  20%, 24%, 55% {
+    filter: none;
+  }
 }

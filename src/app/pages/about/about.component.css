@@ -1,40 +1,135 @@
-.bio-group {
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 100vh;
-  background-position: center;
+.members {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  filter: drop-shadow(0 0 5px #ff00ff);
+}
+
+.band-image {
+  mask-size: 108% 130%;
+  mask-repeat: no-repeat;
+  mask-position: left;
+  max-height: 100%;
+  width: 100%;
+  background-size: cover;
+  transform: scale(0.8);
+}
+
+.members-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6em;
+  justify-content: center;
+  flex: 1;
+  padding: 2rem;
+}
+
+.member-row {
+  display: flex;
+  flex-direction: row;
+  filter: drop-shadow(0 0 5px #ff00ff);
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.member-avatar {
+  filter: drop-shadow(0 0 5px white);
+}
+
+.member-short-descr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1);
+  transition: transform 1s;
+  cursor: pointer;
+}
+
+.member-short-descr:hover {
+  transform: scale(1.5);
+  transition: transform 1s;
+}
+
+.member-short-descr > .member-presentation {
+  margin-top: .5rem;
+}
+
+.member-presentation {
+  display: flex;
+  flex-direction: column;
+}
+
+.member-description {
+  margin: 1rem 0;
 }
 
 .member-mask-image {
-  mask-size: 80%;
+  mask-size: 120%;
   mask-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: mask-scale 4s ease-out;
-  mask-repeat: no-repeat;
 }
 
-@keyframes mask-scale {
-  from {
-    mask-size: 0;
-  }
-  to {
-    mask-size: 80%;
-  }
+.nickname {
+  font-weight: bold;
+  margin-bottom: 0.2rem;
 }
 
-.about-band {
-  z-index: 1;
+.fullname {
+  color: var(--p-text-muted-color);
+  font-size: small;
+  margin-bottom: 0.5rem;
+}
+
+#member-desc-MA {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: 120px;
+  left: 55%;
 }
 
-.band-description {
-  font-size: large;
-  filter: drop-shadow(0 0 5px #ff00ff);
-  text-align: center;
+#member-desc-FM {
+  position: absolute;
+  bottom: 140px;
+  left: 70%;
+}
+
+#member-desc-I {
+  position: absolute;
+  bottom: 150px;
+  left: 25%;
+}
+
+#member-desc-MC {
+  position: absolute;
+  bottom: 400px;
+  left: 80%;
+}
+
+#member-desc-FD {
+  position: absolute;
+  bottom: 70px;
+  left: 40%;
+}
+
+:host(::ng-deep .p-card) {
+  width: 400px !important;
+  max-width: 400px !important;
+  height: 500px !important;
+  max-height: 500px !important;
+  /*box-shadow: 0px 0px 12px 6px rgba(255,79,227,0.67) !important;*/
+  z-index: 0 !important;
+  position: relative !important;
+}
+
+::ng-deep .p-card:hover {
+  transform: scale(1.1) !important;
+  transition: 0.5s;
+  z-index: 99 !important;
 }

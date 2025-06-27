@@ -1,7 +1,31 @@
 <div class="header">
-  <div (click)="goToHome()" class="cursor-pointer">
+  <div (click)="goToHome()" class="cursor-pointer" [ngClass]="{'flex-grow': isPortraitOrientation}">
     <img src="img/logos/logo_plain_white_hd.png" width="100px"/>
   </div>
-  <navbar></navbar>
-  <social-buttons></social-buttons>
+  @if (!isPortraitOrientation) {
+    <navbar></navbar>
+    <social-buttons></social-buttons>
+  } @else {
+    <p-button (click)="showMenu = true" icon="pi pi-bars" class="menu-button"/>
+    <p-drawer [(visible)]="showMenu" position="right" [fullScreen]="isXSmall">
+      @if (isXSmall) {
+        <ng-template #header>
+          <div class="flex flex-col align-items-center justify-content-between">
+            <img src="img/logos/logo_plain_white_hd.png" width="100px"/>
+          </div>
+        </ng-template>
+      }
+
+      <navbar></navbar>
+
+      <ng-template #footer>
+        <div class="flex flex-col align-items-center">
+          {{ 'followUs' | translate }}
+          <div class="flex justify-content-center">
+            <social-buttons></social-buttons>
+          </div>
+        </div>
+      </ng-template>
+    </p-drawer>
+  }
 </div>
