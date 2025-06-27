@@ -13,11 +13,18 @@
     styleClass="cursor-pointer"
     (click)="goToMemberDetail(member.id)">
     <ng-template #title> {{ member.nickname }}</ng-template>
-    <ng-template #subtitle> {{ member.fullname }}</ng-template>
+    <ng-template #subtitle>
+      <div class="flex align-items-center justify-content-center gap-1">
+        {{ member.fullname }}
+        <img class="instrument-img" src="img/icons/instruments/{{member.instrument}}.png" alt="{{ member.instrument }}"
+             width="24" height="24" loading="lazy"/>
+      </div>
+    </ng-template>
     <div class="flex flex-wrap flex-col align-items-center justify-content-center">
       <div class="member-description">{{ member.description | translate }}</div>
       <div style="mask-image: url(img/wallpapers/nebula-mask.png)" class="member-mask-image">
-        <img src="img/members/{{member.photo}}" width="300px"/>
+        <img src="img/members/{{member.photo}}" width="300px" loading="lazy"
+             alt="{{member?.nickname + member?.photo}}"/>
       </div>
     </div>
   </p-card>

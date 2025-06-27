@@ -34,7 +34,7 @@ export class MembersService {
       curriculum: 'francio.curriculum'
     },
     {
-      id: 'I',
+      id: 'IW',
       age: 30,
       fullname: 'Ingemar',
       name: 'Ingemar',
@@ -44,7 +44,7 @@ export class MembersService {
       instrument: 'guitar',
       nickname: 'Ingo',
       photo: 'ingo.png',
-      curriculum: ''
+      curriculum: "ingo.curriculum"
     },
     {
       id: 'MC',
@@ -62,9 +62,9 @@ export class MembersService {
     {
       id: 'FD',
       age: 50,
-      fullname: 'Federico',
+      fullname: 'Federico Domeneghini',
       name: 'Federico',
-      surname: '...',
+      surname: 'Bandana',
       description: 'fede.description',
       shortDescription: 'fede.shortDescription',
       instrument: 'drum',

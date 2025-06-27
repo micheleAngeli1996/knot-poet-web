@@ -1,16 +1,45 @@
 <div class="member-detail">
-  @if (member?.photo; as photo) {
-    <div style="mask-image: url(img/wallpapers/nebulosa-mask2.png)" class="member-mask-image" [ngStyle]="{'width': isPortraitOrientation ? '100%' : '50%'}">
-      <img src="img/members/{{photo}}" class="member-image"/>
+  @if (isPortraitOrientation) {
+
+    <div class="flex flex-col align-items-center">
+      <div class="flex align-items-center member-title">
+        {{ member?.nickname }}
+        <img class="instrument-img" src="img/icons/instruments/{{member?.instrument}}.png"
+             alt="{{ member?.instrument }}"
+             width="48" height="48" loading="lazy"/>
+      </div>
+      <ng-container [ngTemplateOutlet]="memberPhoto"></ng-container>
     </div>
+  } @else {
+    <ng-container [ngTemplateOutlet]="memberPhoto"></ng-container>
   }
+
   <div class="flex flex-grow align-items-center member-card">
     <p-card>
-      <ng-template #title>{{ member?.nickname }}</ng-template>
+      <ng-template #title>
+        @if (!isPortraitOrientation) {
+          <div class="flex align-items-center member-title">
+            {{ member?.nickname }}
+            <img class="instrument-img" src="img/icons/instruments/{{member?.instrument}}.png"
+                 alt="{{ member?.instrument }}"
+                 width="48" height="48" loading="lazy"/>
+          </div>
+        }
+      </ng-template>
       <div>{{ 'name' | translate }}: {{ member?.fullname }}</div>
       <div>{{ 'age' | translate }}: {{ member?.age }}</div>
-      <div>{{ 'instrument' | translate }}: {{ member?.instrument }}</div>
+      <div> {{ 'instrument' | translate }}: {{ member?.instrument! | translate }}</div>
       <div class="curriculum" [innerHTML]="member?.curriculum! | translate"></div>
     </p-card>
   </div>
 </div>
+
+
+<ng-template #memberPhoto>
+  @if (member?.photo; as photo) {
+    <div style="mask-image: url(img/wallpapers/nebulosa-mask2.png)" class="member-mask-image"
+         [ngStyle]="{'width': isPortraitOrientation ? '100%' : '50%'}">
+      <img src="img/members/{{photo}}" width="100%" loading="lazy" alt="{{member?.nickname! + member?.photo!}}"/>
+    </div>
+  }
+</ng-template>

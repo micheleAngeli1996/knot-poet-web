@@ -1,7 +1,7 @@
 <div class="flex flex-col align-items-center justify-content-center"
      [ngClass]="{'contact-container': !isPortraitOrientation}">
 
-  <div>
+  <div class="contact-title">
     <h2>{{ 'contactTitle' | translate }}</h2>
   </div>
 
@@ -16,12 +16,14 @@
         <ng-template #header> {{ 'contactUs' | translate }}</ng-template>
         <form [formGroup]="emailFromGroup" (ngSubmit)="onSubmit()" class="email-form">
           <p-floatlabel>
-            <input type="text" pInputText formControlName="name" class="form-control"/>
-            <label for="name">{{ 'name' | translate }}</label>
+            <input type="text" pInputText formControlName="name" class="form-control"
+                   [ngClass]="{'ng-invalid ng-dirty': emailFromGroup.get('name')?.errors?.['required']}"/>
+            <label for="name">{{ 'name' | translate }}*</label>
           </p-floatlabel>
           <p-floatlabel>
-            <input type="text" pInputText formControlName="emailToReplay" class="form-control"/>
-            <label for="emailToReplay">{{ 'emailToReplay' | translate }}</label>
+            <input type="text" pInputText formControlName="emailToReplay" class="form-control"
+                   [ngClass]="{'ng-invalid ng-dirty': emailFromGroup.get('emailToReplay')?.errors?.['required']}"/>
+            <label for="emailToReplay">{{ 'emailToReplay' | translate }}*</label>
           </p-floatlabel>
           <p-floatlabel>
             <textarea pInputTextarea formControlName="message" [autoResize]="true" class="form-control"></textarea>
@@ -40,24 +42,18 @@
     <div [ngClass]="{'col': !isPortraitOrientation}" class="width-full">
       <p-card class="contact-card" id="directContactCard">
         <ng-template #header>
-          <div class="contact-title">
+          <div class="direct-contact">
             {{ 'directContact' | translate }}
           </div>
         </ng-template>
         <div>
-          @let mail = contactService.mail;
-          <a [href]="'mailto:{{mail}}'" class="p-button-link mx-2" target="_blank">{{ mail }}</a>
-          <clipboard [value]="mail"/>
+          <mail-anchor></mail-anchor>
         </div>
         <div>
-          @let phone = contactService.phone;
-          {{ phone }}
-          <clipboard [value]="phone"/>
+          <phone></phone>
         </div>
       </p-card>
     </div>
   </div>
 
 </div>
-
-<p-toast position="bottom-center"/>

@@ -1,5 +1,5 @@
 <div class="navbar" [ngClass]="{'flex-col height-full': isPortraitOrientation}">
-  @for (item of items; track item.id) {
+  @for (item of items; track $index) {
     <div class="navbar-item">
       <a [routerLink]="item.url" routerLinkActive="link-active" class="p-menubar-item-link">
         <span class="ml-2">{{ item.label! | translate }}</span>

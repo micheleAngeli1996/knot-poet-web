@@ -1,6 +1,6 @@
 <div class="header">
   <div (click)="goToHome()" class="cursor-pointer" [ngClass]="{'flex-grow': isPortraitOrientation}">
-    <img src="img/logos/logo_plain_white_hd.png" width="100px"/>
+    <img src="img/logos/logo_plain_white_hd.png" width="100px" loading="eager" alt="KnotPoetLogo"/>
   </div>
   @if (!isPortraitOrientation) {
     <navbar></navbar>
@@ -11,7 +11,7 @@
       @if (isXSmall) {
         <ng-template #header>
           <div class="flex flex-col align-items-center justify-content-between">
-            <img src="img/logos/logo_plain_white_hd.png" width="100px"/>
+            <img src="img/logos/logo_plain_white_hd.png" width="100px" loading="eager" alt="KnotPoetLogo"/>
           </div>
         </ng-template>
       }

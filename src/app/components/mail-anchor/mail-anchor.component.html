@@ -1,0 +1,3 @@
+@let mail = contactService.mail;
+<a [href]="'mailto:{{mail}}'" class="p-button-link mx-2" target="_blank">{{ mail }}</a>
+<clipboard [value]="mail"/>

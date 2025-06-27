@@ -1,11 +1,12 @@
 import {Component, inject} from '@angular/core';
-import {RouterOutlet} from '@angular/router';
+import {EventType, Router, RouterOutlet} from '@angular/router';
 import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {Toast} from 'primeng/toast';
 import {MessageService} from 'primeng/api';
 import {NgStyle} from '@angular/common';
 import {BreakpointService} from './services/breakpoint.service';
+import {filter} from 'rxjs';
 
 @Component({
   selector: 'root',
@@ -15,11 +16,32 @@ import {BreakpointService} from './services/breakpoint.service';
   providers: [MessageService]
 })
 export class AppComponent {
+  private router = inject(Router);
   private breakpointService = inject(BreakpointService);
   title = 'knot-poet-website';
+  style = {
+    'background-image': 'radial-gradient(circle at center center,rgb(0 0 0), rgb(0 0 0 / 0%)), url(img/wallpapers/nebulosa.png), url(img/wallpapers/nebulosa.png)'
+  };
+
+  constructor() {
+    this.router.events.pipe(filter(e => e.type === EventType.NavigationEnd)).subscribe(e => {
+      if (e.url.includes('privacy-policy')) {
+        window.scrollTo(0, 0);
+        this.style = {'background-image': 'radial-gradient(circle at center center, transparent, rgba(0,0,0 /100%), url(img/wallpapers/nebulosa.png), url(img/wallpapers/nebulosa.png)'};
+      } else {
+        this.style = {'background-image': 'radial-gradient(circle at center center,rgb(0 0 0 / 0%), rgb(0 0 0)), url(img/wallpapers/nebulosa.png), url(img/wallpapers/nebulosa.png)'};
+      }
+    });
+  }
+
+  get combinedStyles(): { [key: string]: string } {
+    const styles: { [key: string]: string } = {...this.style};
+    styles['background-size'] = !this.isPortraitOrientation ? '100% 100%' : '';
+
+    return styles;
+  }
 
   get isPortraitOrientation() {
     return this.breakpointService.isPortraitOrientation();
   }
-
 }

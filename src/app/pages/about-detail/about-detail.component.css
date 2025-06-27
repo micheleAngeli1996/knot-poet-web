@@ -5,19 +5,20 @@
   overflow: auto;
   height: 100%;
   align-items: center;
-  padding: 2rem;
-}
-
-.member-image {
-  width: 40rem;
+  padding: 2rem 0;
 }
 
 .member-mask-image {
-  mask-size: 40rem;
+  mask-size: 100%;
   mask-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.member-title {
+  filter: drop-shadow(0 0 5px #ff00ff);
+  font-size: 3rem;
 }
 
 .curriculum {
@@ -27,4 +28,9 @@
 
 .member-card {
   text-align: justify;
+  margin: 1rem;
+}
+
+.instrument-img {
+  transform: rotateY(180deg);
 }

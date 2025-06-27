@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
 
-html, body {
+html, body, main {
   font-family: "Metamorphous", serif;
   font-weight: 400;
   font-style: normal;
@@ -27,6 +27,14 @@ html, body {
 
 .height-full {
   height: 100%;
+}
+
+.gap-1 {
+  gap: 0.5rem;
+}
+
+.gap-2 {
+  gap: 1rem;
 }
 
 .flex {

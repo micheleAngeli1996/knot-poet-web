@@ -9,7 +9,7 @@
   "name": "Name",
   "instrument": "Instrument",
   "copied": "Copied: {{value}}",
-  "all_rights_reserved": "All rights reserved",
+  "allRightsReserved": "All rights reserved",
   "voice": "Voice",
   "guitar": "Guitar",
   "drum": "Drum",

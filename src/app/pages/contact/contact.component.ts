@@ -3,22 +3,21 @@ import {CardModule} from 'primeng/card';
 import {TranslatePipe} from '@ngx-translate/core';
 import {InputTextModule} from 'primeng/inputtext';
 import {TextareaModule} from 'primeng/textarea';
-import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {Button} from 'primeng/button';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {FloatLabel} from 'primeng/floatlabel';
 import {MessageService} from 'primeng/api';
-import {Toast} from 'primeng/toast';
-import {ClipboardComponent} from '../../components/clipboard/clipboard.component';
 import {Divider} from 'primeng/divider';
-import {ContactService} from '../../services/contact.service';
 import {BreakpointService} from '../../services/breakpoint.service';
 import {NgClass} from '@angular/common';
+import {MailAnchorComponent} from '../../components/mail-anchor/mail-anchor.component';
+import {PhoneComponent} from '../../components/phone/phone.component';
 
 @Component({
   selector: 'contact',
   imports: [CardModule, InputTextModule, TextareaModule, TranslatePipe,
-    ReactiveFormsModule, FormsModule, Button, FloatLabel, Toast, ClipboardComponent, Divider, NgClass],
+    ReactiveFormsModule, FormsModule, Button, FloatLabel, Divider, NgClass, MailAnchorComponent, PhoneComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
@@ -27,11 +26,9 @@ export class ContactComponent {
   private messageService = inject(MessageService);
   private breakpointService = inject(BreakpointService);
 
-  contactService = inject(ContactService);
-
   emailFromGroup = new FormGroup({
-    'name': new FormControl(),
-    'emailToReplay': new FormControl(),
+    'name': new FormControl(null, Validators.required),
+    'emailToReplay': new FormControl(null, Validators.required),
     'message': new FormControl()
   });
 
@@ -71,7 +68,7 @@ export class ContactComponent {
         severity: 'error',
         detail: 'Please fill all the fields',
         life: 3000
-      })
+      });
     }
   }
 

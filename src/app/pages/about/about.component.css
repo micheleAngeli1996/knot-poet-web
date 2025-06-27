@@ -88,34 +88,8 @@
   margin-bottom: 0.5rem;
 }
 
-#member-desc-MA {
-  position: absolute;
-  bottom: 120px;
-  left: 55%;
-}
-
-#member-desc-FM {
-  position: absolute;
-  bottom: 140px;
-  left: 70%;
-}
-
-#member-desc-I {
-  position: absolute;
-  bottom: 150px;
-  left: 25%;
-}
-
-#member-desc-MC {
-  position: absolute;
-  bottom: 400px;
-  left: 80%;
-}
-
-#member-desc-FD {
-  position: absolute;
-  bottom: 70px;
-  left: 40%;
+.instrument-img {
+  transform: rotateY(180deg);
 }
 
 :host(::ng-deep .p-card) {

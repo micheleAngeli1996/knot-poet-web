@@ -25,6 +25,10 @@ button:hover {
   height: 100vh;
 }
 
+.contact-title {
+  filter: drop-shadow(0 0 5px #ff00ff);
+}
+
 .col {
   width: 50%;
   display: flex;
@@ -35,7 +39,7 @@ button:hover {
   width: 100%;
 }
 
-.contact-title {
+.direct-contact {
   color: var(--p-text-muted-color);
 }
 

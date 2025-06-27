@@ -3,12 +3,12 @@ import {ActivatedRoute} from '@angular/router';
 import {MembersService} from '../../services/members.service';
 import {CardModule} from 'primeng/card';
 import {TranslatePipe} from '@ngx-translate/core';
-import {NgStyle} from '@angular/common';
+import {NgStyle, NgTemplateOutlet} from '@angular/common';
 import {BreakpointService} from '../../services/breakpoint.service';
 
 @Component({
   selector: 'about-detail',
-  imports: [CardModule, TranslatePipe, NgStyle],
+  imports: [CardModule, TranslatePipe, NgStyle, NgTemplateOutlet],
   templateUrl: './about-detail.component.html',
   styleUrl: './about-detail.component.css'
 })
@@ -30,5 +30,9 @@ export class AboutDetailComponent {
 
   get isPortraitOrientation() {
     return this.breakpointService.isPortraitOrientation();
+  }
+
+  get isXSmall() {
+    return this.breakpointService.isXSmall();
   }
 }

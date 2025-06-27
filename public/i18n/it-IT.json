@@ -15,7 +15,7 @@
   "send": "Invia",
   "phone": "Telefono",
   "copied": "Copiato: {{value}}",
-  "all_rights_reserved": "Tutti i diritti riservati",
+  "allRightsReserved": "Tutti i diritti riservati",
   "voice": "Voce",
   "guitar": "Chitarra",
   "drum": "Batteria",
@@ -35,7 +35,7 @@
   "ingo": {
     "shortDescription": "Dal passato oscuro",
     "description": "Chitarrista sceso direttamente dalle Alpi Svizzere. La sua calma cela un passato Black Metal",
-    "curriculum": "Inizia il suo percorso musicale sin da tenera età, prima entrando a fare parte di un coro dell'asilo, per poi proseguire facendo diventare matti genitori, fratello e vicini con i suoi acuti che tuttora tormentano il vicinato. La passione per la musica lo pervade da sempre e infatti ha iniziato a cantare in gruppi locali all'età di 15 anni, e nel frattempo studiava da autodidatta nella sua cameretta proseguendo con il suo malefico intento di tormentare il vicinato. Solo più tardi, compiuti i 21 anni inizia a prendere lezioni di canto e chitarra, iniziando un nuovo percorso di agonia. Tuttavia, gl insegnanti di canti stufi dei continui strilli decisero di abbandonarlo invitandolo a proseguire la sua campagna di devastazione in solitario. Fu così che arrivò a conoscere Francio ed Echoes, con i quali condivideva la passione musicale, soprattutto per il metal: con Francio il power e trash metal, mentre con Echoes anche altri generi e artisti. Da qui iniziò il suo percorso come vocalist e frontman della band 'Knot Poet', prefissandosi un unico obiettivo: spaccare i timpani a più gente possibile! Il suo motto è 'Keep the metal ALIVEEEEEEE!!'"
+    "curriculum": "<p>Inizia il suo percorso musicale sin da tenera età, prima entrando a fare parte di un coro dell'asilo, per poi proseguire facendo diventare matti genitori, fratello e vicini con i suoi acuti che tuttora tormentano gli ascoltatori.</p> <p>La passione per la musica lo pervade da sempre e infatti ha iniziato a cantare in gruppi locali all'età di 15 anni, e nel frattempo studia da autodidatta nella sua cameretta proseguendo con il suo malefico intento di tormentare il vicinato. </p> <p>Solo più tardi, compiuti i 21 anni inizia a prendere lezioni di canto e chitarra. Tuttavia, poco tempo dopo, prosegue la sua campagna di devastazione in solitario.</p> Nel 2023 conosce Francio ed Echoes, con i quali condivide la passione musicale, soprattutto per il metal: con Francio il power e trash metal, mentre con Echoes anche altri generi e artisti. Da qui inizia il suo percorso come vocalist e frontman della band 'Knot Poet', prefissandosi un unico obiettivo: spaccare i timpani a più gente possibile!</p> </p>Il suo motto è 'Keep the metal ALIVEEEEEEE!!'</p>"
   },
   "echoes": {
     "shortDescription": "Il groove della galassia",
@@ -48,5 +48,6 @@
     "curriculum": "Inizia il suo percorso musicale sin da tenera età, prima entrando a fare parte di un coro dell'asilo, per poi proseguire facendo diventare matti genitori, fratello e vicini con i suoi acuti che tuttora tormentano il vicinato. La passione per la musica lo pervade da sempre e infatti ha iniziato a cantare in gruppi locali all'età di 15 anni, e nel frattempo studiava da autodidatta nella sua cameretta proseguendo con il suo malefico intento di tormentare il vicinato. Solo più tardi, compiuti i 21 anni inizia a prendere lezioni di canto e chitarra, iniziando un nuovo percorso di agonia. Tuttavia, gl insegnanti di canti stufi dei continui strilli decisero di abbandonarlo invitandolo a proseguire la sua campagna di devastazione in solitario. Fu così che arrivò a conoscere Francio ed Echoes, con i quali condivideva la passione musicale, soprattutto per il metal: con Francio il power e trash metal, mentre con Echoes anche altri generi e artisti. Da qui iniziò il suo percorso come vocalist e frontman della band 'Knot Poet', prefissandosi un unico obiettivo: spaccare i timpani a più gente possibile! Il suo motto è 'Keep the metal ALIVEEEEEEE!!'"
   },
   "contactDivider": "Oppure",
-  "directContact": "Vuoi un contatto diretto?"
+  "directContact": "Vuoi un contatto diretto?",
+  "followUs": "Seguici sui canali social"
 }
