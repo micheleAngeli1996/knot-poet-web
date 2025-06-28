@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {AfterViewInit, Component, inject} from '@angular/core';
 import {EventType, Router, RouterOutlet} from '@angular/router';
 import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
@@ -16,7 +16,7 @@ import {Platform} from '@angular/cdk/platform';
   styleUrl: './app.component.css',
   providers: [MessageService]
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   private router = inject(Router);
   private breakpointService = inject(BreakpointService);
   private platform = inject(Platform);
@@ -35,7 +35,10 @@ export class AppComponent {
         this.style = {'background-image': 'radial-gradient(circle at center center,rgb(0 0 0 / 0%), rgb(0 0 0)), url(img/wallpapers/nebulosa.png), url(img/wallpapers/nebulosa.png)'};
       }
     });
-    if(this.platform.IOS) {
+  }
+
+  ngAfterViewInit() {
+    if (this.platform.IOS) {
       document.querySelector('.container')?.classList.add('ios-container');
     }
   }
