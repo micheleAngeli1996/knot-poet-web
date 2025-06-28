@@ -7,6 +7,7 @@ import {MessageService} from 'primeng/api';
 import {NgStyle} from '@angular/common';
 import {BreakpointService} from './services/breakpoint.service';
 import {filter} from 'rxjs';
+import {Platform} from '@angular/cdk/platform';
 
 @Component({
   selector: 'root',
@@ -18,6 +19,8 @@ import {filter} from 'rxjs';
 export class AppComponent {
   private router = inject(Router);
   private breakpointService = inject(BreakpointService);
+  private platform = inject(Platform);
+
   title = 'knot-poet-website';
   style = {
     'background-image': 'radial-gradient(circle at center center,rgb(0 0 0), rgb(0 0 0 / 0%)), url(img/wallpapers/nebulosa.png), url(img/wallpapers/nebulosa.png)'
@@ -32,6 +35,9 @@ export class AppComponent {
         this.style = {'background-image': 'radial-gradient(circle at center center,rgb(0 0 0 / 0%), rgb(0 0 0)), url(img/wallpapers/nebulosa.png), url(img/wallpapers/nebulosa.png)'};
       }
     });
+    if(this.platform.IOS) {
+      document.querySelector('.container')?.classList.add('ios-container');
+    }
   }
 
   get combinedStyles(): { [key: string]: string } {

@@ -8,6 +8,12 @@
   background-position: center;
 }
 
+.ios-container {
+  background-attachment: unset !important;
+  background-size: cover !important;
+  aspect-ratio: 1 / 2 !important;
+}
+
 .layout-header {
   position: fixed;
   width: 100%;
