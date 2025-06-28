@@ -8,7 +8,7 @@
   background-position: center;
 }
 
-.ios-container {
+.mobile-container {
   background-attachment: unset !important;
   background-size: cover !important;
 }

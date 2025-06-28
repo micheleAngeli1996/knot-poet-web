@@ -38,8 +38,8 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    if (this.platform.IOS) {
-      document.querySelector('.container')?.classList.add('ios-container');
+    if (this.platform.IOS || this.platform.ANDROID) {
+      document.querySelector('.container')?.classList.add('mobile-container');
     }
   }
 
