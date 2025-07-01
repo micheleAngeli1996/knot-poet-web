@@ -1,6 +1,7 @@
 <div class="member-detail">
-  @if (isPortraitOrientation) {
+  @let member = member$ | async;
 
+  @if (isPortraitOrientation) {
     <div class="flex flex-col align-items-center">
       <div class="flex align-items-center member-title">
         {{ member?.nickname }}
@@ -29,7 +30,7 @@
       <div>{{ 'name' | translate }}: {{ member?.fullname }}</div>
       <div>{{ 'age' | translate }}: {{ member?.age }}</div>
       <div> {{ 'instrument' | translate }}: {{ member?.instrument! | translate }}</div>
-      <div class="curriculum" [innerHTML]="member?.curriculum! | translate"></div>
+      <div class="longDescription" [innerHTML]="member?.longDescription! | translate"></div>
     </p-card>
   </div>
 </div>

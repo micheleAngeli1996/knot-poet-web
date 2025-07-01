@@ -30,12 +30,12 @@ export const routes: Routes = [
   },
   {
     path: 'privacy-policy',
-    title: 'Privacy Policy',
+    title: 'Knot Poet Official - Privacy Policy',
     loadComponent: () => import('./pages/privacy-policy/privacy-policy.component').then(m => m.PrivacyPolicyComponent)
   },
   {
     path: 'news',
-    title: 'News',
+    title: 'Knot Poet Official - News',
     loadComponent: () => import('./pages/news/news.component').then(m => m.NewsComponent)
   },
   {path: '**', component: PageNotFoundComponent}

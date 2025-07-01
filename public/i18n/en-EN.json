@@ -1,0 +1,56 @@
+{
+  "home": "Home",
+  "about": "About",
+  "members": "Members",
+  "contact": "Contact",
+  "news": "News",
+  "contactTitle": "Contact us!",
+  "contactUsAnytime": "You can reach out to us anytime! We're open to compliments, advice, gentle insults, and much more!",
+  "contactUs": "Write to us, we'll reply!",
+  "age": "Age",
+  "name": "Name",
+  "instrument": "Instrument",
+  "email": "Email",
+  "emailToReplay": "Email",
+  "message": "Message",
+  "send": "Send",
+  "phone": "Phone",
+  "copied": "Copied: {{value}}",
+  "allRightsReserved": "All rights reserved",
+  "voice": "Vocals",
+  "guitar": "Guitar",
+  "drum": "Drums",
+  "bass": "Bass",
+  "aboutTitle": "A fusion of poetic and aggressive sound",
+  "bandDescription": "Knot Poet was born from the fusion of dreamlike sounds and metal atmospheres.<br /> Each song is a journey into the subconscious, guided by evocative lyrics and powerful arrangements.",
+  "mitch": {
+    "shortDescription": "The voice of the band",
+    "description": "Frontman and guitarist, a poetic jack-of-all-trades.",
+    "longDescription": "<p>From his early days in a kindergarten choir to tormenting neighbors with his piercing high notes, Mitch has always been musically possessed. At 15, he joined local bands and started training in secret, plotting sonic vengeance from his bedroom.</p>  <p>At 21, he finally started vocal and guitar lessons—much to the regret of his instructors, who eventually encouraged him to pursue his destructive journey solo. In 2023, he met Francio and Echoes, bonding over their love of metal—power and thrash with Francio, and eclectic metal vibes with Echoes.</p>  <p>Thus, Knot Poet was born, with Mitch at the helm, ready to rupture eardrums across the globe. His motto? <strong>\"Keep the metal ALIVEEEEEEE!!\"</strong></p>"
+  },
+  "francio": {
+    "shortDescription": "The riffman",
+    "description": "Guitarist and band founder, listens to records only he and the recording engineers have heard.",
+    "longDescription": "<p>While others were watching cartoons, Francio was dissecting guitar solos and tracking down obscure vinyl. A true sound archaeologist, he founded Knot Poet with a vision: to fuse poetic atmospheres with face-melting riffs.</p>  <p>Known for his encyclopedic knowledge of underground metal, Francio brings the crunch, the precision, and the headbanging rhythm section that makes walls shake. When he’s not playing, he’s probably digging through forgotten forums for rare demo tapes.</p>  <p>He doesn’t speak much—his riffs do all the talking.</p>"
+  },
+  "ingo": {
+    "shortDescription": "From a shadowy past",
+    "description": "A guitarist from the Swiss Alps. Calm exterior, black metal past.",
+    "longDescription": "<p>Raised in the silence of the mountains, Ingo’s calm demeanor hides a turbulent history in underground black metal. He traded frostbitten forests for smoky rehearsal rooms—but kept the darkness in his tone.</p>  <p>When he met the Knot Poet crew, he brought with him haunting melodies, glacial tremolo picking, and an uncanny ability to summon storms with a single chord.</p>  <p>He doesn’t smile much—but when he does, it’s usually after a perfectly executed blast beat.</p>"
+  },
+  "echoes": {
+    "shortDescription": "Groove from another world",
+    "description": "Progressive bassist. Playing bass made him bald.",
+    "longDescription": "<p>Echoes didn’t choose the bass life—the bass life chose him. With fingers faster than light and a groove that could realign planets, he brings a cosmic touch to Knot Poet’s heavy foundation.</p>  <p>Influenced by prog, funk, and jazz, Echoes blends styles with elegance, aggression, and… minimal hair. Legends say each slap of his strings echoes across dimensions.</p>  <p>He’s not just the backbone—he’s the whole damn skeleton.</p>"
+  },
+  "fede": {
+    "shortDescription": "His bandana is legend",
+    "description": "Fede, the drummer of all drummers. Speaks little, hits hard. Yes, he wears the bandana even in bed.",
+    "longDescription": "<p>Fede emerged from the chaos of cymbals and toms with one purpose: to make sure nobody ever sits still. Known for his relentless energy and mythical bandana, he’s the pulse of the band.</p>  <p>He doesn’t waste time on words—his double kicks say it all. Whether in the studio or on stage, Fede delivers pure percussive power with pinpoint precision.</p>  <p>And yes, even his toothbrush has a blast beat setting.</p>"
+  },
+  "contactDivider": "Or",
+  "directContact": "Want to reach us directly?",
+  "followUs": "Follow us on social media",
+  "pageNotFound": "Oops… This page doesn't exist.",
+  "backToHome": "Back to home"
+}

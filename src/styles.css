@@ -86,7 +86,7 @@ html, body, main {
 }
 
 .flickering-animation {
-  animation: flicker 5s linear 5s alternate;
+  animation: flicker 5s linear 0s alternate;
 }
 
 /* Flickering animation */

@@ -17,7 +17,8 @@ export class NavbarComponent {
   items: MenuItem[] = [
     {label: 'home', url: 'home'},
     {label: 'about', url: 'about'},
-    {label: 'contact', url: 'contact'}
+    {label: 'contact', url: 'contact'},
+    {label: 'news', url: 'news'},
   ];
 
   get isPortraitOrientation() {

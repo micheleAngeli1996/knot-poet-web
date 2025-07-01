@@ -5,5 +5,6 @@ export interface Member extends Person {
   instrument: string,
   description: string,
   shortDescription: string,
-  curriculum: string;
+  longDescription: string;
+  order: number;
 }

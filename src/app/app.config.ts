@@ -10,14 +10,12 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {provideAnimations} from '@angular/platform-browser/animations';
 
 import {initializeApp} from "firebase/app";
-import {getAnalytics} from "firebase/analytics";
-import {provideClientHydration, withIncrementalHydration} from '@angular/platform-browser';
+import {provideFirebaseApp} from '@angular/fire/app';
+import {getFirestore, provideFirestore} from '@angular/fire/firestore';
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import localeIt from '@angular/common/locales/it';
+import {registerLocaleData} from '@angular/common';
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyAY2Mg-br_5TG0njX-3Af6BZi-hIDerUqg",
   authDomain: "knotpoet-d351b.firebaseapp.com",
@@ -29,9 +27,7 @@ const firebaseConfig = {
   measurementId: "G-SMP0RTSE24"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+registerLocaleData(localeIt);
 
 const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: HttpClient) => new TranslateHttpLoader(http, './i18n/', '.json');
 
@@ -52,8 +48,10 @@ export const appConfig: ApplicationConfig = {
         useFactory: httpLoaderFactory,
         deps: [HttpClient],
       },
-      defaultLanguage: navigator.language || 'en-US'
+      defaultLanguage: navigator.language || 'en-EN'
     })]),
+    provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    provideFirestore(() => getFirestore()),
     provideHttpClient(withInterceptorsFromDi()),
     providePrimeNG({
       ripple: false,

@@ -20,3 +20,14 @@ a:hover {
   border-right: 2px solid #c445dd;
   height: 1rem;
 }
+
+.flag-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+:host(::ng-deep .p-button),
+:host(::ng-deep .p-menu-item-content > .p-button){
+  padding: 0 !important;
+}

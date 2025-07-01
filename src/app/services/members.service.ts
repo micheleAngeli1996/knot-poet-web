@@ -1,84 +1,20 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {Member} from '../models/Members';
+import {FirestoreService} from './firestore.service';
+import {News} from '../models/News';
+import {filter, find, map, mergeMap} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MembersService {
+  private firestoreService = inject(FirestoreService);
 
-  private _members: Member[] = [
-    {
-      id: 'MA',
-      age: 29,
-      fullname: 'Michele Angeli',
-      name: 'Michele',
-      surname: 'Angeli',
-      description: 'mitch.description',
-      shortDescription: 'mitch.shortDescription',
-      instrument: 'voice',
-      nickname: 'Mitch',
-      photo: 'mitch.png',
-      curriculum: "mitch.curriculum"
-    },
-    {
-      id: 'FM',
-      age: 30,
-      fullname: 'Francesco Martinelli',
-      name: 'Francesco',
-      surname: 'Martinelli',
-      description: 'francio.description',
-      shortDescription: 'francio.shortDescription',
-      instrument: 'guitar',
-      nickname: 'Francio',
-      photo: 'francio.png',
-      curriculum: 'francio.curriculum'
-    },
-    {
-      id: 'IW',
-      age: 30,
-      fullname: 'Ingemar',
-      name: 'Ingemar',
-      surname: '...',
-      description: 'ingo.description',
-      shortDescription: 'ingo.shortDescription',
-      instrument: 'guitar',
-      nickname: 'Ingo',
-      photo: 'ingo.png',
-      curriculum: "ingo.curriculum"
-    },
-    {
-      id: 'MC',
-      age: 30,
-      fullname: 'Michele Ciccia',
-      name: 'Michele',
-      surname: 'Ciccia',
-      description: 'echoes.description',
-      shortDescription: 'echoes.shortDescription',
-      instrument: 'bass',
-      nickname: 'Echoes',
-      photo: 'echoes.png',
-      curriculum: 'echoes.curriculum'
-    },
-    {
-      id: 'FD',
-      age: 50,
-      fullname: 'Federico Domeneghini',
-      name: 'Federico',
-      surname: 'Bandana',
-      description: 'fede.description',
-      shortDescription: 'fede.shortDescription',
-      instrument: 'drum',
-      nickname: 'Fede',
-      photo: 'fede.png',
-      curriculum: 'fede.curriculum'
-    },
-  ];
-
-  get members() {
-    return this._members;
+  getMembers() {
+    return this.firestoreService.getCollection<Member>('members').pipe(map(members => members.sort((a, b) => a.order - b.order)));
   }
 
   getMember(memberId: string) {
-    return this.members.find(m => m.id === memberId);
+    return this.getMembers().pipe(mergeMap(members => members), find(m => m.id === memberId));
   }
 }

@@ -60,7 +60,7 @@ export class AppComponent implements AfterViewInit {
 
   get backgroundImage() {
     if (this.isXSmall) {
-      return 'img/wallpapers/nebulosa-portrait-500.png';
+      return 'img/wallpapers/nebulosa-portrait.png';
     }
     return 'img/wallpapers/nebulosa.png';
   }

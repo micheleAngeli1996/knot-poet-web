@@ -1,6 +1,12 @@
 <div class="footer">
   <p>&copy; 2025 Knot Poet</p>
-  <!--<p-divider [layout]="'vertical'" styleClass="footer-divider"></p-divider>-->
   <div class="divider"></div>
   <a (click)="goToPrivacyPolicy()">Privacy Policy</a>
+  <div class="divider"></div>
+  <p-menu #languagesMenu [model]="languagesItems | slice:(languageIndex-1):(languagesItems.length - languageIndex)" [popup]="true" appendTo="body"/>
+  <p-button (click)="languagesMenu.toggle($event)" text="true" rounded="true">
+    <span class="flag-icon">
+     <img [src]="flagIcon"/>
+    </span>
+  </p-button>
 </div>

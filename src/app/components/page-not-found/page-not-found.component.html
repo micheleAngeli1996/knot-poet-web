@@ -1,1 +1,5 @@
-<p>page-not-found works!</p>
+<div class="flex flex-col align-items-center">
+  <h1 class="flickering-animation">404</h1>
+  <h2>{{ 'pageNotFound' | translate }}</h2>
+  <p-button label="{{'backToHome' | translate}}" (click)="goToHome()" class="btn-home"></p-button>
+</div>

@@ -1,0 +1,31 @@
+<form [formGroup]="subscribeForm" (ngSubmit)="onSubmit()" novalidate>
+  <div>
+    <label for="email">{{ 'email' | translate }}:</label>
+    <input id="email" type="email" formControlName="email" placeholder="Inserisci la tua email"/>
+    @let emailForm = subscribeForm.controls['email'];
+    @if (submitted && emailForm.errors) {
+      <div class="error">
+        @if (emailForm.errors['required']) {
+          {{ 'emailRequired' | translate }}
+        }
+        @if (emailForm.errors['email']) {
+          {{ 'emailInvalid' | translate }}
+        }
+      </div>
+    }
+  </div>
+
+  <button type="submit">Iscriviti</button>
+
+  @if (successMessage) {
+    <div class="success">
+      {{ successMessage }}
+    </div>
+  }
+
+  @if (errorMessage) {
+    <div class="error">
+      {{ errorMessage }}
+    </div>
+  }F
+</form>

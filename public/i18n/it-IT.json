@@ -1,8 +1,9 @@
 {
   "home": "Home",
-  "about": "About",
+  "about": "Chi siamo",
   "members": "Membri",
   "contact": "Contatti",
+  "news": "Notizie",
   "contactTitle": "Contattaci!",
   "contactUsAnytime": "Puoi contattarci in qualsiasi momento! Siamo disponibili per complimenti, consigli, placidi insulti e tanto altro!",
   "contactUs": "Scrivici pure, ti risponderemo!",
@@ -21,33 +22,35 @@
   "drum": "Batteria",
   "bass": "Basso",
   "aboutTitle": "Una fusione di suono poetico e aggressivo",
-  "bandDescription": "Knot Poet nasce dalla fusione di sonorità oniriche e atmosfere metal.<br /> Ogni brano è un viaggio nel subconscio,\n    guidato da liriche evocative e arrangiamenti potenti.",
+  "bandDescription": "Knot Poet nasce dalla fusione di sonorità oniriche e atmosfere metal. <br /> Ogni brano è un viaggio nel subconscio, guidato da liriche evocative e arrangiamenti potenti.",
   "mitch": {
     "shortDescription": "La voce della band",
-    "description": "Voce della band, frontman e chitarrista: un poeta tuttofare!",
-    "curriculum": "<p>Inizia il suo percorso musicale sin da tenera età, prima entrando a fare parte di un coro dell'asilo, per poi proseguire facendo diventare matti genitori, fratello e vicini con i suoi acuti che tuttora tormentano gli ascoltatori.</p> <p>La passione per la musica lo pervade da sempre e infatti ha iniziato a cantare in gruppi locali all'età di 15 anni, e nel frattempo studia da autodidatta nella sua cameretta proseguendo con il suo malefico intento di tormentare il vicinato. </p> <p>Solo più tardi, compiuti i 21 anni inizia a prendere lezioni di canto e chitarra. Tuttavia, poco tempo dopo, prosegue la sua campagna di devastazione in solitario.</p> Nel 2023 conosce Francio ed Echoes, con i quali condivide la passione musicale, soprattutto per il metal: con Francio il power e trash metal, mentre con Echoes anche altri generi e artisti. Da qui inizia il suo percorso come vocalist e frontman della band 'Knot Poet', prefissandosi un unico obiettivo: spaccare i timpani a più gente possibile!</p> </p>Il suo motto è 'Keep the metal ALIVEEEEEEE!!'</p>"
+    "description": "Frontman, cantautore e chitarrista ritmico: un poeta con un megafono!",
+    "longDescription": "<p>Dai primi giorni nel coro dell'asilo fino a tormentare i vicini con le sue note acute, Mitch è sempre stato posseduto dalla musica. A 15 anni entra in alcune band locali e inizia ad allenarsi in segreto, progettando vendetta sonora dalla sua cameretta.</p> <p>A 21 anni inizia finalmente lezioni di canto e chitarra — con grande rammarico dei suoi insegnanti, che alla fine lo incoraggiano a proseguire il suo cammino distruttivo da solista. Nel 2023 incontra Francio ed Echoes, legando grazie all’amore comune per il metal: power e thrash con Francio, vibrazioni più eclettiche con Echoes.</p> <p>Così nasce Knot Poet, con Mitch al comando, pronto a distruggere timpani in tutto il mondo. Il suo motto? <strong>\"Keep the metal ALIVEEEEEEE!!\"</strong></p>"
   },
   "francio": {
     "shortDescription": "Il riffman",
     "description": "Chitarrista e fondatore del gruppo, ascolta dischi che conoscono solo lui e chi li ha registrati",
-    "curriculum": "Inizia il suo percorso musicale sin da tenera età, prima entrando a fare parte di un coro dell'asilo, per poi proseguire facendo diventare matti genitori, fratello e vicini con i suoi acuti che tuttora tormentano il vicinato. La passione per la musica lo pervade da sempre e infatti ha iniziato a cantare in gruppi locali all'età di 15 anni, e nel frattempo studiava da autodidatta nella sua cameretta proseguendo con il suo malefico intento di tormentare il vicinato. Solo più tardi, compiuti i 21 anni inizia a prendere lezioni di canto e chitarra, iniziando un nuovo percorso di agonia. Tuttavia, gl insegnanti di canti stufi dei continui strilli decisero di abbandonarlo invitandolo a proseguire la sua campagna di devastazione in solitario. Fu così che arrivò a conoscere Francio ed Echoes, con i quali condivideva la passione musicale, soprattutto per il metal: con Francio il power e trash metal, mentre con Echoes anche altri generi e artisti. Da qui iniziò il suo percorso come vocalist e frontman della band 'Knot Poet', prefissandosi un unico obiettivo: spaccare i timpani a più gente possibile! Il suo motto è 'Keep the metal ALIVEEEEEEE!!'"
+    "longDescription": "<p>Francio è il motore sonoro della band. Fondatore e architetto del sound dei Knot Poet, plasma riff taglienti e progressioni armoniche che fondono il thrash metal con influenze cinematiche e progressive.</p> <p>Appassionato collezionista di vinili e gear analogico, vive la musica con un’intensità quasi mistica. È lui a creare l’ossatura di molte composizioni del gruppo, partendo da idee grezze che diventano muri di suono. In studio è meticoloso, sul palco è una furia. Non parla molto, ma lascia che la chitarra urli per lui.</p>"
   },
   "ingo": {
     "shortDescription": "Dal passato oscuro",
     "description": "Chitarrista sceso direttamente dalle Alpi Svizzere. La sua calma cela un passato Black Metal",
-    "curriculum": "<p>Inizia il suo percorso musicale sin da tenera età, prima entrando a fare parte di un coro dell'asilo, per poi proseguire facendo diventare matti genitori, fratello e vicini con i suoi acuti che tuttora tormentano gli ascoltatori.</p> <p>La passione per la musica lo pervade da sempre e infatti ha iniziato a cantare in gruppi locali all'età di 15 anni, e nel frattempo studia da autodidatta nella sua cameretta proseguendo con il suo malefico intento di tormentare il vicinato. </p> <p>Solo più tardi, compiuti i 21 anni inizia a prendere lezioni di canto e chitarra. Tuttavia, poco tempo dopo, prosegue la sua campagna di devastazione in solitario.</p> Nel 2023 conosce Francio ed Echoes, con i quali condivide la passione musicale, soprattutto per il metal: con Francio il power e trash metal, mentre con Echoes anche altri generi e artisti. Da qui inizia il suo percorso come vocalist e frontman della band 'Knot Poet', prefissandosi un unico obiettivo: spaccare i timpani a più gente possibile!</p> </p>Il suo motto è 'Keep the metal ALIVEEEEEEE!!'</p>"
+    "longDescription": "<p>Ingo è il mistero del gruppo. Originario delle Alpi, porta con sé un tocco glaciale e oscuro. Il suo background nel black metal si riflette nei suoi fraseggi tetri, nelle armonie dissonanti e nelle atmosfere che sa evocare.</p> <p>Nel silenzio compone paesaggi sonori onirici e inquietanti, che si intrecciano perfettamente con la furia ritmica della band. Preciso come un orologio svizzero, ma con l’anima in fiamme: è la colonna portante del lato più cupo e atmosferico di Knot Poet.</p>"
   },
   "echoes": {
     "shortDescription": "Il groove della galassia",
     "description": "Bassista progressista. Suonare il basso l'ha reso pelato",
-    "curriculum": "Inizia il suo percorso musicale sin da tenera età, prima entrando a fare parte di un coro dell'asilo, per poi proseguire facendo diventare matti genitori, fratello e vicini con i suoi acuti che tuttora tormentano il vicinato. La passione per la musica lo pervade da sempre e infatti ha iniziato a cantare in gruppi locali all'età di 15 anni, e nel frattempo studiava da autodidatta nella sua cameretta proseguendo con il suo malefico intento di tormentare il vicinato. Solo più tardi, compiuti i 21 anni inizia a prendere lezioni di canto e chitarra, iniziando un nuovo percorso di agonia. Tuttavia, gl insegnanti di canti stufi dei continui strilli decisero di abbandonarlo invitandolo a proseguire la sua campagna di devastazione in solitario. Fu così che arrivò a conoscere Francio ed Echoes, con i quali condivideva la passione musicale, soprattutto per il metal: con Francio il power e trash metal, mentre con Echoes anche altri generi e artisti. Da qui iniziò il suo percorso come vocalist e frontman della band 'Knot Poet', prefissandosi un unico obiettivo: spaccare i timpani a più gente possibile! Il suo motto è 'Keep the metal ALIVEEEEEEE!!'"
+    "longDescription": "<p>Echoes è il groove cosmico dei Knot Poet. Con un background nel progressive e nel funk, ha una visione ritmica fuori dagli schemi. Ogni nota del suo basso aggiunge spessore e movimento alle composizioni della band.</p> <p>Abile nella sperimentazione sonora, ama giocare con effetti e ritmiche irregolari, portando nei live un’energia contagiosa. Il suo stile è tanto tecnico quanto emotivo. E sì, la calvizie è un segno di dedizione: ogni capello perso, un groove guadagnato.</p>"
   },
   "fede": {
     "shortDescription": "La sua bandana è leggenda",
-    "description": "Fede, il batteristia di tutti: parla poco e picchia tanto. Sì anche a letto mette la bandana",
-    "curriculum": "Inizia il suo percorso musicale sin da tenera età, prima entrando a fare parte di un coro dell'asilo, per poi proseguire facendo diventare matti genitori, fratello e vicini con i suoi acuti che tuttora tormentano il vicinato. La passione per la musica lo pervade da sempre e infatti ha iniziato a cantare in gruppi locali all'età di 15 anni, e nel frattempo studiava da autodidatta nella sua cameretta proseguendo con il suo malefico intento di tormentare il vicinato. Solo più tardi, compiuti i 21 anni inizia a prendere lezioni di canto e chitarra, iniziando un nuovo percorso di agonia. Tuttavia, gl insegnanti di canti stufi dei continui strilli decisero di abbandonarlo invitandolo a proseguire la sua campagna di devastazione in solitario. Fu così che arrivò a conoscere Francio ed Echoes, con i quali condivideva la passione musicale, soprattutto per il metal: con Francio il power e trash metal, mentre con Echoes anche altri generi e artisti. Da qui iniziò il suo percorso come vocalist e frontman della band 'Knot Poet', prefissandosi un unico obiettivo: spaccare i timpani a più gente possibile! Il suo motto è 'Keep the metal ALIVEEEEEEE!!'"
+    "description": "Fede, il batterista di tutti: parla poco e picchia tanto. Sì, anche a letto mette la bandana",
+    "longDescription": "<p>Fede è il martello della band. Dietro le pelli, è una macchina da guerra: preciso, potente e instancabile. Il suo stile mescola tecnica, groove e pura aggressività, con un’attenzione maniacale per i dettagli ritmici.</p> <p>È il membro più silenzioso del gruppo, ma basta un colpo di rullante per far capire chi comanda. La sua bandana è ormai simbolo di battaglia e, a quanto pare, non se ne separa mai. Con lui sul palco, nessun palco è al sicuro.</p>"
   },
   "contactDivider": "Oppure",
   "directContact": "Vuoi un contatto diretto?",
-  "followUs": "Seguici sui canali social"
+  "followUs": "Seguici sui canali social",
+  "pageNotFound": "Oops… Questa pagina non esiste.",
+  "backToHome": "Torna alla home"
 }
