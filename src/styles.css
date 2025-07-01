@@ -80,6 +80,10 @@ html, body, main {
   background: #ae59c082 !important;
 }
 
+.p-drawer {
+  border: unset !important;
+}
+
 ::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */
