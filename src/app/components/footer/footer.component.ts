@@ -34,7 +34,6 @@ export class FooterComponent {
   }
 
   changeLang(event: MenuItemCommandEvent) {
-    console.log(event);
     this.translateService.use(event.item?.id!);
   }
 

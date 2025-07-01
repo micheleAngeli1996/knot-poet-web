@@ -41,16 +41,17 @@
   "echoes": {
     "shortDescription": "Groove from another world",
     "description": "Progressive bassist. Playing bass made him bald.",
-    "longDescription": "<p>Echoes didn’t choose the bass life—the bass life chose him. With fingers faster than light and a groove that could realign planets, he brings a cosmic touch to Knot Poet’s heavy foundation.</p>  <p>Influenced by prog, funk, and jazz, Echoes blends styles with elegance, aggression, and… minimal hair. Legends say each slap of his strings echoes across dimensions.</p>  <p>He’s not just the backbone—he’s the whole damn skeleton.</p>"
+    "longDescription": "<p>Echoes didn’t choose the bass life—the bass life chose him. With fingers faster than light and a groove that could realign planets, he brings a cosmic touch to Knot Poet’s heavy foundation.</p>  <p>Influenced by prog, funk, and jazz, Echoes blends styles with elegance and aggression. Legends say each slap of his strings echoes across dimensions.</p>  <p>And yes, baldness is a sign of dedication: every hair lost, a groove gained.</p>"
   },
   "fede": {
     "shortDescription": "His bandana is legend",
     "description": "Fede, the drummer of all drummers. Speaks little, hits hard. Yes, he wears the bandana even in bed.",
-    "longDescription": "<p>Fede emerged from the chaos of cymbals and toms with one purpose: to make sure nobody ever sits still. Known for his relentless energy and mythical bandana, he’s the pulse of the band.</p>  <p>He doesn’t waste time on words—his double kicks say it all. Whether in the studio or on stage, Fede delivers pure percussive power with pinpoint precision.</p>  <p>And yes, even his toothbrush has a blast beat setting.</p>"
+    "longDescription": "<p>Fede emerged from the chaos of cymbals and toms with one purpose: to make sure nobody ever sits still. Known for his relentless energy and mythical bandana, he’s the pulse of the band.</p>  <p>He doesn’t waste time on words—his double kicks say it all. Whether in the studio or on stage, Fede delivers pure percussive power with pinpoint precision.</p>"
   },
   "contactDivider": "Or",
   "directContact": "Want to reach us directly?",
   "followUs": "Follow us on social media",
   "pageNotFound": "Oops… This page doesn't exist.",
-  "backToHome": "Back to home"
+  "backToHome": "Back to home",
+  "newsSubtitle": "Latest updates, thoughts, and releases"
 }

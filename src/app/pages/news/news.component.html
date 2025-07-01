@@ -1,14 +1,15 @@
 <div class="news-header">
-  <h2>News</h2>
-  <p>Ultimi aggiornamenti, pensieri e pubblicazioni</p>
+  <h2>{{ 'news' | translate | titlecase }}</h2>
+  <p>{{ 'newsSubtitle' | translate }}</p>
 </div>
 
 <div class="news-content">
   @for (newArticle of news$ | async; track newArticle.id) {
+    @let newArticleTr = newArticle[lang] || {};
     <article>
-      <h2>{{ newArticle.title }}</h2>
+      <h2>{{ newArticleTr.title }}</h2>
       <span class="time">{{ newArticle.date | date:'mediumDate':undefined:translateService.defaultLang }}</span>
-      <p>{{ newArticle.content }}</p>
+      <p>{{ newArticleTr.content }}</p>
     </article>
   }
 </div>

@@ -1,6 +1,6 @@
 <div class="members">
   <h2 class="title">{{ 'aboutTitle' | translate }}</h2>
-  <div [innerHTML]="'bandDescription' | translate"></div>
+  <h4 [innerHTML]="'bandDescription' | translate"></h4>
   <div class="members-list">
     @for (member of members$ | async; track member.id) {
       <ng-container *ngTemplateOutlet="memberCard; context: {$implicit: member}"></ng-container>

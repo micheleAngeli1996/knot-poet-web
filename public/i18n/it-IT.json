@@ -31,26 +31,25 @@
   "francio": {
     "shortDescription": "Il riffman",
     "description": "Chitarrista e fondatore del gruppo, ascolta dischi che conoscono solo lui e chi li ha registrati",
-    "longDescription": "<p>Francio è il motore sonoro della band. Fondatore e architetto del sound dei Knot Poet, plasma riff taglienti e progressioni armoniche che fondono il thrash metal con influenze cinematiche e progressive.</p> <p>Appassionato collezionista di vinili e gear analogico, vive la musica con un’intensità quasi mistica. È lui a creare l’ossatura di molte composizioni del gruppo, partendo da idee grezze che diventano muri di suono. In studio è meticoloso, sul palco è una furia. Non parla molto, ma lascia che la chitarra urli per lui.</p>"
+    "longDescription": "<p>Mentre gli altri guardavano i cartoni animati, Francio analizzava assoli di chitarra e dava la caccia a vinili oscuri. Vero archeologo del suono, ha fondato i Knot Poet con una visione: fondere atmosfere poetiche con riff che sciolgono la faccia.</p>  <p>Conosciuto per la sua conoscenza enciclopedica del metal underground, Francio porta potenza, precisione e una sezione ritmica da headbanging capace di far tremare i muri. Quando non suona, è probabile che stia scavando in vecchi forum alla ricerca di demo dimenticati.</p>  <p>Parla poco: sono i suoi riff a dire tutto.</p>"
   },
   "ingo": {
     "shortDescription": "Dal passato oscuro",
     "description": "Chitarrista sceso direttamente dalle Alpi Svizzere. La sua calma cela un passato Black Metal",
-    "longDescription": "<p>Ingo è il mistero del gruppo. Originario delle Alpi, porta con sé un tocco glaciale e oscuro. Il suo background nel black metal si riflette nei suoi fraseggi tetri, nelle armonie dissonanti e nelle atmosfere che sa evocare.</p> <p>Nel silenzio compone paesaggi sonori onirici e inquietanti, che si intrecciano perfettamente con la furia ritmica della band. Preciso come un orologio svizzero, ma con l’anima in fiamme: è la colonna portante del lato più cupo e atmosferico di Knot Poet.</p>"
+    "longDescription": "<p>Cresciuto nel silenzio delle montagne, la calma di Ingo nasconde un passato turbolento nel black metal underground. Ha scambiato le foreste gelate per sale prove piene di fumo—ma ha mantenuto l’oscurità nel suo suono.</p>  <p>Quando ha incontrato la crew dei Knot Poet, ha portato con sé melodie inquietanti, picking glaciali in tremolo e un’abilità soprannaturale nel evocare tempeste con un solo accordo.</p>  <p>Non sorride spesso—ma quando lo fa, di solito è dopo un blast beat eseguito alla perfezione.</p>"
   },
   "echoes": {
     "shortDescription": "Il groove della galassia",
     "description": "Bassista progressista. Suonare il basso l'ha reso pelato",
-    "longDescription": "<p>Echoes è il groove cosmico dei Knot Poet. Con un background nel progressive e nel funk, ha una visione ritmica fuori dagli schemi. Ogni nota del suo basso aggiunge spessore e movimento alle composizioni della band.</p> <p>Abile nella sperimentazione sonora, ama giocare con effetti e ritmiche irregolari, portando nei live un’energia contagiosa. Il suo stile è tanto tecnico quanto emotivo. E sì, la calvizie è un segno di dedizione: ogni capello perso, un groove guadagnato.</p>"
-  },
+    "longDescription": "<p>Echoes non ha scelto la vita da bassista—è la vita da bassista ad aver scelto lui. Con dita più veloci della luce e un groove capace di riallineare i pianeti, porta un tocco cosmico alle fondamenta pesanti dei Knot Poet.</p>  <p>Influenzato da prog, funk e jazz, Echoes fonde gli stili con eleganza ed aggressività. La leggenda narra che ogni suo slap risuoni attraverso le dimensioni.</p>  <p>E sì, la calvizie è un segno di dedizione: ogni capello perso, un groove guadagnato.</p>"},
   "fede": {
     "shortDescription": "La sua bandana è leggenda",
     "description": "Fede, il batterista di tutti: parla poco e picchia tanto. Sì, anche a letto mette la bandana",
-    "longDescription": "<p>Fede è il martello della band. Dietro le pelli, è una macchina da guerra: preciso, potente e instancabile. Il suo stile mescola tecnica, groove e pura aggressività, con un’attenzione maniacale per i dettagli ritmici.</p> <p>È il membro più silenzioso del gruppo, ma basta un colpo di rullante per far capire chi comanda. La sua bandana è ormai simbolo di battaglia e, a quanto pare, non se ne separa mai. Con lui sul palco, nessun palco è al sicuro.</p>"
-  },
+    "longDescription": "<p>Fede è emerso dal caos di piatti e tom con un unico scopo: assicurarsi che nessuno stesse mai fermo. Noto per la sua energia incessante e la sua mitica bandana, è il cuore pulsante della band.</p> <p>Non perde tempo con le parole: le sue doppie calciature dicono tutto. Che sia in studio o sul palco, Fede sprigiona pura potenza percussiva con precisione millimetrica.</p>"  },
   "contactDivider": "Oppure",
   "directContact": "Vuoi un contatto diretto?",
   "followUs": "Seguici sui canali social",
   "pageNotFound": "Oops… Questa pagina non esiste.",
-  "backToHome": "Torna alla home"
+  "backToHome": "Torna alla home",
+  "newsSubtitle": "Ultimi aggiornamenti, pensieri e pubblicazioni"
 }

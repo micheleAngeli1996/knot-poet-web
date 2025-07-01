@@ -1,17 +1,19 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {NewsService} from '../../services/news.service';
-import {AsyncPipe, DatePipe} from '@angular/common';
+import {AsyncPipe, DatePipe, TitleCasePipe} from '@angular/common';
 import {News} from '../../models/News';
 import {Observable} from 'rxjs';
 import {CardModule} from 'primeng/card';
-import {TranslateService} from '@ngx-translate/core';
+import {TranslatePipe, TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'news',
   imports: [
     AsyncPipe,
     DatePipe,
-    CardModule
+    CardModule,
+    TranslatePipe,
+    TitleCasePipe
   ],
   templateUrl: './news.component.html',
   styleUrl: './news.component.css'
@@ -23,5 +25,9 @@ export class NewsComponent implements OnInit {
 
   ngOnInit() {
     this.news$ = this.newsService.getNews();
+  }
+
+  get lang() {
+    return this.translateService.currentLang || this.translateService.defaultLang;
   }
 }
