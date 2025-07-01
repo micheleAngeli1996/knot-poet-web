@@ -23,16 +23,16 @@ export class AppComponent implements AfterViewInit {
 
   title = 'knot-poet-website';
   style = {
-    'background-image': 'radial-gradient(circle at center center,rgb(0 0 0), rgb(0 0 0 / 0%)), url(img/wallpapers/nebulosa.png), url(img/wallpapers/nebulosa.png)'
+    'background-image': 'radial-gradient(circle at center center,rgb(0 0 0), rgb(0 0 0 / 0%)), url(' + this.backgroundImage + ')'
   };
 
   constructor() {
     this.router.events.pipe(filter(e => e.type === EventType.NavigationEnd)).subscribe(e => {
       if (e.url.includes('privacy-policy')) {
         window.scrollTo(0, 0);
-        this.style = {'background-image': 'radial-gradient(circle at center center, transparent, rgba(0,0,0 /100%), url(img/wallpapers/nebulosa.png), url(img/wallpapers/nebulosa.png)'};
+        this.style = {'background-image': 'radial-gradient(circle at center center, transparent, rgba(0,0,0 /100%), url(' + this.backgroundImage + ')'};
       } else {
-        this.style = {'background-image': 'radial-gradient(circle at center center,rgb(0 0 0 / 0%), rgb(0 0 0)), url(img/wallpapers/nebulosa.png), url(img/wallpapers/nebulosa.png)'};
+        this.style = {'background-image': 'radial-gradient(circle at center center,rgb(0 0 0 / 0%), rgb(0 0 0)), url(' + this.backgroundImage + ')'};
       }
     });
   }
@@ -52,5 +52,16 @@ export class AppComponent implements AfterViewInit {
 
   get isPortraitOrientation() {
     return this.breakpointService.isPortraitOrientation();
+  }
+
+  get isXSmall() {
+    return this.breakpointService.isXSmall();
+  }
+
+  get backgroundImage() {
+    if (this.isXSmall) {
+      return 'img/wallpapers/nebulosa-portrait-500.png';
+    }
+    return 'img/wallpapers/nebulosa.png';
   }
 }

@@ -10,7 +10,8 @@
 
 .mobile-container {
   background-attachment: unset !important;
-  background-size: cover !important;
+  background-size: contain !important;
+  background-repeat: repeat-y;
 }
 
 .layout-header {
