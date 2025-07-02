@@ -1,112 +1,175 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="utf-8">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="manifest" href="site.webmanifest">
-  <title>KnotPoet – Official Website | Music, News & Releases</title>
+  <title>KnotPoet – Sito Ufficiale | Musica, News e Concerti</title>
   <base href="/">
 
   <!-- Mobile & Accessibility -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#000000">
   <meta name="color-scheme" content="dark light">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="robots" content="index, follow">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
 
-  <!-- SEO -->
-  <meta name="description"
-        content="Discover and explore the official site of Knot Poet: music, band info, latest releases, tour dates and more. Join our dark poetic journey.">
-  <meta name="keywords"
-        content="KnotPoet,Knot Poet, knot poet, site, official site, sito, sito ufficiale, music, band, official, metal, tour, releases,">
+  <!-- SEO Essenziale -->
+  <meta name="description" content="Esplora il sito ufficiale di KnotPoet per le ultime news, musica, date dei tour e contenuti esclusivi. Unisciti alla community e resta connesso.">
+  <meta name="keywords" content="KnotPoet, Knot Poet, metal, musica, band italiana, tour, concerti, releases, news">
   <meta name="author" content="KnotPoet">
-  <meta name="application-name" content="KnotPoet - Official Website">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="KnotPoet – Official Website"/>
-  <meta property="og:description" content="Discover KnotPoet's music, latest news, and official updates."/>
-  <meta property="og:image" content="https://www.knotpoet.com/img/logos/logo-rounded.png"/>
-  <meta property="og:url" content="https://www.knotpoet.com/"/>
-  <meta property="og:type" content="website"/>
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.knotpoet.com/">
+
+  <!-- Favicon e Icons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KnotPoet – Sito Ufficiale | Musica, News e Concerti">
+  <meta property="og:description" content="Esplora il sito ufficiale di KnotPoet per le ultime news, musica, date dei tour e contenuti esclusivi.">
+  <meta property="og:url" content="https://www.knotpoet.com/">
+  <meta property="og:site_name" content="KnotPoet">
+  <meta property="og:image" content="https://www.knotpoet.com/img/logos/logo-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="it_IT">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="KnotPoet – Official Website">
-  <meta name="twitter:description"
-        content="Explore the official site of KnotPoet: music, latest releases, tour dates and more.">
-  <meta name="twitter:image" content="https://www.knotpoet.com/img/logos/logo-rounded.png">
+  <meta name="twitter:title" content="KnotPoet – Sito Ufficiale">
+  <meta name="twitter:description" content="Esplora il sito ufficiale di KnotPoet per le ultime news, musica, date dei tour e contenuti esclusivi.">
+  <meta name="twitter:image" content="https://www.knotpoet.com/img/logos/logo-twitter.png">
+
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="QF8iXARxrQPEdAYDwsL8dhBr8OWHwAoxVcunUFPNHCE">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
 
-  <!--Google Search Console-->
-  <meta name="google-site-verification" content="QF8iXARxrQPEdAYDwsL8dhBr8OWHwAoxVcunUFPNHCE"/>
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
+  <!-- Structured Data - Website -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Knot Poet",
+      "name": "KnotPoet",
+      "alternateName": "Knot Poet",
       "url": "https://www.knotpoet.com",
+      "description": "Sito ufficiale di KnotPoet - band metal italiana. News, musica, tour e contenuti esclusivi.",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.knotpoet.com/#organization"
+      },
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://www.knotpoet.com/search?q={search_term_string}",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.knotpoet.com/search?q={search_term_string}"
+        },
         "query-input": "required name=search_term_string"
       }
     }
   </script>
+
+  <!-- Structured Data - Organization/MusicGroup -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MusicGroup",
-      "name": "Knot Poet",
-      "genre": ["Metal", "Progressive", "Alternative", "Dreaming Metal"],
-      "description": "Knot Poet was born from the fusion of dreamlike sounds and metal atmospheres. Each song is a journey into the subconscious, guided by evocative lyrics and powerful arrangements.",
+      "@id": "https://www.knotpoet.com/#organization",
+      "name": "KnotPoet",
+      "alternateName": "Knot Poet",
+      "description": "KnotPoet nasce dalla fusione di suoni onirici e atmosfere metal. Ogni brano è un viaggio nel subconscio, guidato da lyriche evocative e arrangiamenti potenti.",
       "url": "https://www.knotpoet.com",
-      "logo": "https://www.knotpoet.com/logos/logo.png",
-      "sameAs": [
-        "https://www.instagram.com/knotpoet_"
-      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.knotpoet.com/img/logos/logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://www.knotpoet.com/img/band/band.png",
+      "genre": ["Metal", "Progressive Metal", "Alternative Metal", "Dreaming Metal"],
+      "foundingDate": "2023",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Brescia",
+        "addressLocality": "Brescia",
+        "addressRegion": "Lombardia",
+        "addressCountry": "IT"
+      },
       "member": [
         {
           "@type": "Person",
           "name": "Michele Angeli",
-          "nickname": "Mitch"
+          "alternateName": "Mitch",
+          "roleName": "Vocalist"
         },
         {
           "@type": "Person",
           "name": "Francesco Martinelli",
-          "nickname": "Francio"
+          "alternateName": "Francio",
+          "roleName": "Guitarist"
         },
         {
           "@type": "Person",
           "name": "Ingemar Wust",
-          "nickname": "Ingo"
+          "alternateName": "Ingo",
+          "roleName": "Guitarist"
         },
         {
           "@type": "Person",
           "name": "Michele Ciccia",
-          "nickname": "Echoes"
+          "alternateName": "Echoes",
+          "roleName": "Bassist"
         },
         {
           "@type": "Person",
           "name": "Federico Domeneghini",
-          "nickname": "Bandana"
+          "alternateName": "Bandana",
+          "roleName": "Drummer"
         }
       ],
-      "foundingDate": "2023",
-      "foundingLocation": {
-        "@type": "Place",
-        "name": "Brescia, Italy"
-      }
+      "sameAs": [
+        "https://www.instagram.com/knotpoet_"
+      ]
+    }
+  </script>
+
+  <!-- Structured Data - Breadcrumb Navigation -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.knotpoet.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://www.knotpoet.com/about"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "News",
+          "item": "https://www.knotpoet.com/news"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Contact",
+          "item": "https://www.knotpoet.com/contact"
+        }
+      ]
     }
   </script>
 

@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {CardModule} from 'primeng/card';
 import {TranslatePipe} from '@ngx-translate/core';
 import {InputTextModule} from 'primeng/inputtext';
@@ -13,6 +13,7 @@ import {BreakpointService} from '../../services/breakpoint.service';
 import {NgClass} from '@angular/common';
 import {MailAnchorComponent} from '../../components/mail-anchor/mail-anchor.component';
 import {PhoneComponent} from '../../components/phone/phone.component';
+import {SEOService} from '../../services/seo.service';
 
 @Component({
   selector: 'contact',
@@ -21,16 +22,64 @@ import {PhoneComponent} from '../../components/phone/phone.component';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
   private http = inject(HttpClient);
   private messageService = inject(MessageService);
   private breakpointService = inject(BreakpointService);
+  private seoService = inject(SEOService);
 
   emailFromGroup = new FormGroup({
     'name': new FormControl(null, Validators.required),
     'emailToReplay': new FormControl(null, Validators.required),
     'message': new FormControl()
   });
+
+  ngOnInit() {
+    this.seoService.updateSEO(this.seoService.getContactPageSEO());
+
+    // Structured data per i contatti
+    const contactStructuredData = {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "mainEntity": {
+        "@type": "Organization",
+        "@id": "https://www.knotpoet.com/#organization",
+        "name": "KnotPoet",
+        "url": "https://www.knotpoet.com",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "Booking",
+            "email": "booking@knotpoet.com",
+            "description": "Per richieste di concerti e booking"
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "Press",
+            "email": "press@knotpoet.com",
+            "description": "Per interviste e materiale stampa"
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "General",
+            "email": "info@knotpoet.com",
+            "description": "Informazioni generali"
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "Management",
+            "email": "management@knotpoet.com",
+            "description": "Management e collaborazioni"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/knotpoet_"
+        ]
+      }
+    };
+
+    this.seoService.updateStructuredData(contactStructuredData);
+  }
 
   onSubmit() {
     if (this.emailFromGroup.valid) {
