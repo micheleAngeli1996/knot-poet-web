@@ -1,1 +1,4 @@
-Sitemap: https://knotpoet.com/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://www.knotpoet.com/sitemap.xml

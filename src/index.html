@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <title>KnotPoet – Official Website | Music, News & Releases</title>
   <base href="/">
 
@@ -10,12 +11,15 @@
   <meta name="theme-color" content="#000000">
   <meta name="color-scheme" content="dark light">
   <meta name="format-detection" content="telephone=no">
+  <meta name="robots" content="index, follow">
 
   <!-- SEO -->
   <meta name="description"
-        content="Explore the official site of Knot Poet: music, latest releases, tour dates and more.">
-  <meta name="keywords" content="KnotPoet, knot poet, sito, music, band, official, metal, tour, releases">
+        content="Discover and explore the official site of Knot Poet: music, band info, latest releases, tour dates and more. Join our dark poetic journey.">
+  <meta name="keywords"
+        content="KnotPoet,Knot Poet, knot poet, site, official site, sito, sito ufficiale, music, band, official, metal, tour, releases,">
   <meta name="author" content="KnotPoet">
+  <meta name="application-name" content="KnotPoet - Official Website">
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:title" content="KnotPoet – Official Website"/>
@@ -31,42 +35,41 @@
         content="Explore the official site of KnotPoet: music, latest releases, tour dates and more.">
   <meta name="twitter:image" content="https://www.knotpoet.com/img/logos/logo-rounded.png">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="img/logos/logo-rounded.png">
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="img/logo/logo-rounded.png" />
+
+  <!--Google Search Console-->
+  <meta name="google-site-verification" content="QF8iXARxrQPEdAYDwsL8dhBr8OWHwAoxVcunUFPNHCE"/>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-  <!-- Cookie Consent (uncomment when ready) -->
-<!--  <script id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="4dc18a03-f402-43b0-a3da-cefebe2bdb86"
-          data-blockingmode="auto"
-          type="text/javascript"></script>-->
-
-  <!--<script type="application/ld+json">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Knot Poet",
+      "url": "https://www.knotpoet.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.knotpoet.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MusicGroup",
-      "name": "KnotPoet",
+      "name": "Knot Poet",
+      "genre": ["Metal", "Progressive", "Alternative", "Dreaming Metal"],
+      "description": "Knot Poet was born from the fusion of dreamlike sounds and metal atmospheres. Each song is a journey into the subconscious, guided by evocative lyrics and powerful arrangements.",
       "url": "https://www.knotpoet.com",
-      "image": "https://www.knotpoet.com/img/logos/logo-rounded.png",
-      "genre": [
-        "Metal",
-        "Alternative Metal"
-      ],
-      "description": "KnotPoet is an alternative metal band blending poetic lyrics with heavy soundscapes. Discover music, videos, and tour updates on the official site.",
+      "logo": "https://www.knotpoet.com/logos/logo.png",
       "sameAs": [
-        "https://www.instagram.com/knotpoet",
-        "https://www.youtube.com/@knotpoet",
-        "https://open.spotify.com/artist/xyz",
-        "https://www.facebook.com/knotpoet"
+        "https://www.instagram.com/knotpoet_"
       ],
       "member": [
         {
@@ -102,83 +105,6 @@
       }
     }
   </script>
-
-  &lt;!&ndash;Music Event&ndash;&gt;
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MusicEvent",
-      "name": "KnotPoet Live in Milano",
-      "startDate": "2025-07-20T21:00:00+02:00",
-      "endDate": "2025-07-20T23:00:00+02:00",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "location": {
-        "@type": "Place",
-        "name": "Legend Club",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Viale Enrico Fermi, 98",
-          "addressLocality": "Milano",
-          "addressCountry": "IT"
-        }
-      },
-      "image": [
-        "https://www.knotpoet.com/img/posters/knotpoet-live-milano-2025.jpg"
-      ],
-      "description": "Join KnotPoet for a powerful live performance in Milano. Expect intense energy, poetic lyrics, and raw metal soundscapes.",
-      "performer": {
-        "@type": "MusicGroup",
-        "name": "KnotPoet",
-        "url": "https://www.knotpoet.com"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://www.knotpoet.com/tickets/milano-2025",
-        "price": "15.00",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock",
-        "validFrom": "2025-06-01T09:00:00+02:00"
-      }
-    }
-  </script>
-
-  &lt;!&ndash;Music Album&ndash;&gt;
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MusicAlbum",
-      "name": "Echoes of the Void",
-      "byArtist": {
-        "@type": "MusicGroup",
-        "name": "KnotPoet",
-        "url": "https://www.knotpoet.com"
-      },
-      "image": "https://www.knotpoet.com/img/albums/echoes-of-the-void-cover.jpg",
-      "datePublished": "2025-05-10",
-      "genre": [
-        "Metal",
-        "Atmospheric Metal"
-      ],
-      "numTracks": 8,
-      "track": [
-        {
-          "@type": "MusicRecording",
-          "name": "Master of Time",
-          "url": "https://www.knotpoet.com/music/master-of-time",
-          "duration": "PT4M32S",
-          "inAlbum": "Echoes of the Void"
-        },
-        {
-          "@type": "MusicRecording",
-          "name": "Where Stars Stand",
-          "url": "https://www.knotpoet.com/music/where-stars-stand",
-          "duration": "PT5M12S",
-          "inAlbum": "Echoes of the Void"
-        }
-      ]
-    }
-  </script>-->
 
 </head>
 
