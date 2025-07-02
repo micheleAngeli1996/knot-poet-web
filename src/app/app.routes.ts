@@ -7,7 +7,7 @@ export const routes: Routes = [
   {
     path: 'home',
     title: 'Knot Poet Official - Home',
-    component: LandingPageComponent
+    loadComponent: () => import('./pages/landing-page/landing-page.component').then(m => m.LandingPageComponent),
   },
   {
     path: 'shop',
