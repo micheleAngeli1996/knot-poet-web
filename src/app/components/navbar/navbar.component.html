@@ -1,9 +1,11 @@
-<div class="navbar" [ngClass]="{'flex-col height-full': isPortraitOrientation}">
+<nav role="navigation" aria-label="Menu" class="navbar" [ngClass]="{'flex-col height-full': isPortraitOrientation}">
   @for (item of items; track $index) {
+    @let label = item.label! | translate;
     <div class="navbar-item">
-      <a [routerLink]="item.url" routerLinkActive="link-active" class="p-menubar-item-link">
-        <span class="ml-2">{{ item.label! | translate }}</span>
+      <a [routerLink]="item.url" routerLinkActive="link-active" class="p-menubar-item-link"
+         title="{{label | translate}}">
+        <span class="ml-2">{{ label! }}</span>
       </a>
     </div>
   }
-</div>
+</nav>

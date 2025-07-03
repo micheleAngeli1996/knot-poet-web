@@ -2,7 +2,7 @@ import {Component, inject} from '@angular/core';
 import {NavbarComponent} from '../navbar/navbar.component';
 import {SocialButtonsComponent} from '../social-buttons/social-buttons.component';
 import {ButtonModule, ButtonProps} from 'primeng/button';
-import {EventType, Router} from '@angular/router';
+import {EventType, Router, RouterLink} from '@angular/router';
 import {NgClass} from '@angular/common';
 import {BreakpointService} from '../../services/breakpoint.service';
 import {DrawerModule} from 'primeng/drawer';
@@ -11,7 +11,7 @@ import {filter} from 'rxjs';
 
 @Component({
   selector: 'header',
-  imports: [NavbarComponent, SocialButtonsComponent, ButtonModule, DrawerModule, NgClass, TranslatePipe],
+  imports: [NavbarComponent, SocialButtonsComponent, ButtonModule, DrawerModule, NgClass, TranslatePipe, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
