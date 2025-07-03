@@ -10,9 +10,84 @@
     <lastmod>2025-07-02</lastmod>
     <image:image>
       <image:loc>https://www.knotpoet.com/img/logos/logo.png</image:loc>
-      <image:title>KnotPoet Logo</image:title>
-      <image:caption>Logo ufficiale della band KnotPoet</image:caption>
     </image:image>
+  </url>
+
+  <!-- News -->
+  <url>
+    <loc>https://www.knotpoet.com/news</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-07-02</lastmod>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://www.knotpoet.com/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-07-02</lastmod>
+    <image:image>
+      <image:loc>https://www.knotpoet.com/img/members/band.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.knotpoet.com/about/MA</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-07-02</lastmod>
+    <image:image>
+      <image:loc>https://www.knotpoet.com/img/members/mitch.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.knotpoet.com/about/FM</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-07-02</lastmod>
+    <image:image>
+      <image:loc>https://www.knotpoet.com/img/members/francio.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.knotpoet.com/about/IW</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-07-02</lastmod>
+    <image:image>
+      <image:loc>https://www.knotpoet.com/img/members/ingo.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.knotpoet.com/about/MC</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-07-02</lastmod>
+    <image:image>
+      <image:loc>https://www.knotpoet.com/img/members/echoes.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.knotpoet.com/about/FD</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-07-02</lastmod>
+    <image:image>
+      <image:loc>https://www.knotpoet.com/img/members/fede.png</image:loc>
+    </image:image>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://www.knotpoet.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-07-02</lastmod>
   </url>
 
   <!-- Store -->
@@ -54,44 +129,6 @@
   <!--    </image:image>-->
   <!--  </url>-->
 
-  <!-- News -->
-  <url>
-    <loc>https://www.knotpoet.com/news</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-07-02</lastmod>
-   <!-- <image:image>
-      <image:loc>https://www.knotpoet.com/img/news/news-banner.jpg</image:loc>
-      <image:title>KnotPoet News</image:title>
-      <image:caption>Ultime notizie e aggiornamenti di KnotPoet</image:caption>
-    </image:image>-->
-  </url>
-
-  <!-- About -->
-  <url>
-    <loc>https://www.knotpoet.com/about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-07-02</lastmod>
-    <image:image>
-      <image:loc>https://www.knotpoet.com/img/members/band.png</image:loc>
-      <image:title>KnotPoet Band</image:title>
-      <image:caption>Foto ufficiale della band KnotPoet</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Contact -->
-  <url>
-    <loc>https://www.knotpoet.com/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2025-07-02</lastmod>
-    <!--<image:image>
-      <image:loc>https://www.knotpoet.com/img/contact/contact-banner.jpg</image:loc>
-      <image:title>Contatti KnotPoet</image:title>
-      <image:caption>Informazioni di contatto per KnotPoet</image:caption>
-    </image:image>-->
-  </url>
 
   <!-- Pagine News Specifiche (esempi) -->
   <!--  <url>-->
