@@ -41,6 +41,7 @@ export class ContactComponent implements OnInit {
     const contactStructuredData = {
       "@context": "https://schema.org",
       "@type": "ContactPage",
+      "url": "https://www.knotpoet.com/contact",
       "mainEntity": {
         "@type": "Organization",
         "@id": "https://www.knotpoet.com/#organization",

@@ -31,6 +31,7 @@ export class AboutComponent implements OnInit {
     const aboutStructuredData = {
       "@context": "https://schema.org",
       "@type": "AboutPage",
+      "url": "https://www.knotpoet.com/about",
       "mainEntity": {
         "@type": "MusicGroup",
         "@id": "https://www.knotpoet.com/#organization",

@@ -7,6 +7,13 @@ html, body, main {
   height: 100%;
 }
 
+h1, h2 {
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
 .member-container {
   display: flex;
   flex-direction: row;
