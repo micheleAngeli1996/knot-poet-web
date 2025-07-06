@@ -2,9 +2,6 @@
 @import "primeicons/primeicons.css";
 
 html, body, main {
-  font-family: "Metamorphous", serif;
-  font-weight: 400;
-  font-style: normal;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -27,6 +24,10 @@ html, body, main {
 
 .height-full {
   height: 100%;
+}
+
+.pad-2 {
+  padding: 2rem;
 }
 
 .gap-1 {

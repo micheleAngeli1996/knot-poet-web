@@ -10,7 +10,7 @@
   </div>
 
   <div class="flex flex-grow width-full"
-       [ngClass]="{'flex-col align-items-center': isPortraitOrientation, 'flex-row': !isPortraitOrientation }">
+       [ngClass]="{'flex-col align-items-center pad-2': isPortraitOrientation, 'flex-row': !isPortraitOrientation }">
     <div [ngClass]="{'col': !isPortraitOrientation}" class="width-full">
       <p-card class="contact-card">
         <ng-template #header> {{ 'contactUs' | translate }}</ng-template>

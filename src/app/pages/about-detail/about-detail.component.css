@@ -28,6 +28,7 @@
 
 .member-card {
   text-align: justify;
+  hyphens: auto;
   margin: 1rem;
 }
 
