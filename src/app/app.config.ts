@@ -15,6 +15,7 @@ import {getFirestore, provideFirestore} from '@angular/fire/firestore';
 
 import localeIt from '@angular/common/locales/it';
 import {registerLocaleData} from '@angular/common';
+import {getFunctions, provideFunctions} from '@angular/fire/functions';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAY2Mg-br_5TG0njX-3Af6BZi-hIDerUqg",
@@ -52,6 +53,7 @@ export const appConfig: ApplicationConfig = {
     })]),
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
     provideFirestore(() => getFirestore()),
+    provideFunctions(() => getFunctions()),
     provideHttpClient(withInterceptorsFromDi()),
     providePrimeNG({
       ripple: false,
