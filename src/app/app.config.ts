@@ -16,17 +16,7 @@ import {getFirestore, provideFirestore} from '@angular/fire/firestore';
 import localeIt from '@angular/common/locales/it';
 import {registerLocaleData} from '@angular/common';
 import {getFunctions, provideFunctions} from '@angular/fire/functions';
-
-const firebaseConfig = {
-  apiKey: "AIzaSyAY2Mg-br_5TG0njX-3Af6BZi-hIDerUqg",
-  authDomain: "knotpoet-d351b.firebaseapp.com",
-  databaseURL: "https://knotpoet-d351b-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "knotpoet-d351b",
-  storageBucket: "knotpoet-d351b.firebasestorage.app",
-  messagingSenderId: "270241771530",
-  appId: "1:270241771530:web:4229cba49fabefb204eff3",
-  measurementId: "G-SMP0RTSE24"
-};
+import {environment} from '../environments/environment';
 
 registerLocaleData(localeIt);
 
@@ -51,18 +41,18 @@ export const appConfig: ApplicationConfig = {
       },
       defaultLanguage: navigator.language || 'en-EN'
     })]),
-    provideFirebaseApp(() => initializeApp(firebaseConfig)),
-    provideFirestore(() => getFirestore()),
-    provideFunctions(() => getFunctions()),
-    provideHttpClient(withInterceptorsFromDi()),
-    providePrimeNG({
-      ripple: false,
-      theme: {
-        preset: kpPreset,
-        options: {
-          darkModeSelector: '.app-dark'
+    provideFirebaseApp(() => initializeApp(environment.FIREBASE_CONFIG)),
+      provideFirestore(() => getFirestore()),
+      provideFunctions(() => getFunctions()),
+      provideHttpClient(withInterceptorsFromDi()),
+      providePrimeNG({
+        ripple: false,
+        theme: {
+          preset: kpPreset,
+          options: {
+            darkModeSelector: '.app-dark'
+          }
         }
-      }
-    })
+      })
   ]
 };
