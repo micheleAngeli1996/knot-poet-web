@@ -16,6 +16,13 @@
       {
         "source": "**",
         "destination": "/index.html"
+      },
+      {
+        "source": "/unsubscribe",
+        "function": {
+          "functionId": "unsubscribe",
+          "region": "europe-west1"
+        }
       }
     ]
   },
