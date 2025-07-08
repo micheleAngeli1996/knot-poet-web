@@ -16,9 +16,7 @@
       {
         "source": "/api/sendMail",
         "function": {
-          "functionId": "sendMail",
-          "pinTag": true,
-          "region": "europe-west1"
+          "functionId": "sendMail"
         }
       },
       {
@@ -38,7 +36,9 @@
         "firebase-debug.*.log",
         "*.local"
       ],
-      "predeploy": []
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ]
     }
   ]
 }

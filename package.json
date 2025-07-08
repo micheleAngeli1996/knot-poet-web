@@ -1,6 +1,6 @@
 {
   "name": "knot-poet-website",
-  "version": "2025.06.16.001",
+  "version": "2025.07.08.001",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --o --port 4300",
