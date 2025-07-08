@@ -21,14 +21,17 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-exports.sendMail = onDocumentCreated("news/{newsId}", async (event) => {
-  const newsData = event.data?.data();
-  const newsId = event.params.newsId;
-
-  if (!newsData || !newsData.title) {
-    console.warn("Dati newsletter incompleti:", newsId);
+exports.sendMail = onDocumentCreated({
+  region: "europe-west1",
+  document: "news/{newsId}"
+}, async (event) => {
+  const snapshot = event.data;
+  if (!snapshot) {
+    console.log("No data associated with the event");
     return;
   }
+  const newsData = snapshot.data();
+  const newsId = event.params.newsId;
 
   const newsletterLink = `https://www.knotpoet.com/news/${newsId}`;
 
@@ -48,11 +51,16 @@ exports.sendMail = onDocumentCreated("news/{newsId}", async (event) => {
       const subscriber = doc.data();
       const email = subscriber.email;
       const name = subscriber.name || "lettore";
-      const lang = subscriber.lang ?? "it-IT";
+      const lang = subscriber.lang || "it-IT";
       const unsubscribeToken = crypto.randomBytes(16).toString("hex");
       const title = newsData[lang].title;
 
-      // 🔐 salva unsubscribeToken per futuro uso
+      if (!newsData[lang]) {
+        console.warn("Dati newsletter incompleti:", newsId);
+        return;
+      }
+
+      // Salva unsubscribeToken per futuro uso
       await doc.ref.update({unsubscribeToken});
 
       const unsubscribeLink = `https://www.knotpoet.com/unsubscribe?token=${unsubscribeToken}`;
@@ -137,7 +145,7 @@ unsubscribeApp.get("/", async (req, res) => {
 
   try {
     // 🔍 Cerca il documento con quel token
-    const snapshot = await db.collection("newsletter")
+    const snapshot = await db.collection("subscribers")
       .where("unsubscribeToken", "==", token)
       .limit(1)
       .get();
@@ -149,11 +157,8 @@ unsubscribeApp.get("/", async (req, res) => {
       `);
     }
 
-    const doc = snapshot.docs[0];
-    const ref = doc.ref;
-
-    // 🔒 Disattiva iscrizione
-    await ref.update({subscribed: false});
+    // Disattiva iscrizione
+    await snapshot.docs[0].ref.update({subscribed: false});
 
     return res.status(200).send(`
       <h2>Disiscrizione completata ✅</h2>
@@ -168,7 +173,7 @@ unsubscribeApp.get("/", async (req, res) => {
   }
 });
 
-// 🔥 Endpoint HTTPS Firebase
+// Endpoint HTTPS Firebase
 exports.unsubscribe = onRequest(
   {region: "europe-west1", cors: true},
   unsubscribeApp

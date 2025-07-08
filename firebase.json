@@ -18,6 +18,13 @@
         "destination": "/index.html"
       },
       {
+        "source": "/sendMail",
+        "function": {
+          "functionId": "sendMail",
+          "region": "europe-west1"
+        }
+      },
+      {
         "source": "/unsubscribe",
         "function": {
           "functionId": "unsubscribe",
@@ -37,9 +44,7 @@
         "firebase-debug.*.log",
         "*.local"
       ],
-      "predeploy": [
-        "npm --prefix \"$RESOURCE_DIR\" run lint"
-      ]
+      "predeploy": []
     }
   ]
 }
