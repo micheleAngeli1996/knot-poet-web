@@ -1,0 +1,11 @@
+<div class="news-content">
+  @let newArticle = newsById$ | async;
+  @if (newArticle) {
+    @let newArticleTr = newArticle[lang] || {};
+    <article>
+      <h2>{{ newArticleTr.title }}</h2>
+      <span class="time">{{ newArticle.date | date:'mediumDate':undefined:translateService.defaultLang }}</span>
+      <p>{{ newArticleTr.content }}</p>
+    </article>
+  }
+</div>

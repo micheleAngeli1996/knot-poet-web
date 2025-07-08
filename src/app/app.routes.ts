@@ -38,5 +38,9 @@ export const routes: Routes = [
     title: 'Knot Poet Official - News',
     loadComponent: () => import('./pages/news/news.component').then(m => m.NewsComponent)
   },
+  {
+    path: 'news/:id',
+    loadComponent: () => import('./pages/news-detail/news-detail.component').then(m => m.NewsDetailComponent)
+  },
   {path: '**', component: PageNotFoundComponent}
 ];
