@@ -21,7 +21,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-exports.sendMail = onDocumentCreated("newsletters/{newsId}", async (event) => {
+exports.sendMail = onDocumentCreated("news/{newsId}", async (event) => {
   const newsData = event.data?.data();
   const newsId = event.params.newsId;
 
@@ -30,7 +30,6 @@ exports.sendMail = onDocumentCreated("newsletters/{newsId}", async (event) => {
     return;
   }
 
-  const title = newsData.title;
   const newsletterLink = `https://www.knotpoet.com/news/${newsId}`;
 
   try {
@@ -49,8 +48,9 @@ exports.sendMail = onDocumentCreated("newsletters/{newsId}", async (event) => {
       const subscriber = doc.data();
       const email = subscriber.email;
       const name = subscriber.name || "lettore";
-      const lang = subscriber.lang === "en" ? "en-EN" : "it-IT";
+      const lang = subscriber.lang ?? "it-IT";
       const unsubscribeToken = crypto.randomBytes(16).toString("hex");
+      const title = newsData[lang].title;
 
       // 🔐 salva unsubscribeToken per futuro uso
       await doc.ref.update({unsubscribeToken});
