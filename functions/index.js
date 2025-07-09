@@ -3,8 +3,7 @@ const {initializeApp, firestore} = require("firebase-admin/app");
 const {getFirestore} = require("firebase-admin/firestore");
 const {onRequest} = require("firebase-functions/v2/https");
 const nodemailer = require("nodemailer");
-const crypto = require("crypto");
-const express = require("express");
+ const express = require("express");
 require("dotenv").config();
 
 initializeApp();
@@ -52,7 +51,7 @@ exports.sendMailToSubscribersForNews = onDocumentCreated({region: "europe-west1"
       const email = subscriber.email;
       const name = subscriber.name || "lettore";
       const lang = subscriber.lang || "it-IT";
-      const unsubscribeToken = crypto.randomBytes(16).toString("hex");
+      const unsubscribeToken = crypto.randomUUID();
       const title = newsData[lang].title;
 
       if (!newsData[lang]) {

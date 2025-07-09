@@ -10,7 +10,7 @@
   <div class="flex flex-col gap-1">
     <label for="name">{{ 'name' | translate }}*</label>
     <input pInputText fluid="true" id="name" formControlName="name" [placeholder]="'yourName' | translate"
-           [ngClass]="{'invalid': submitted && f['name']?.errors?.['required']}"/>
+           [ngClass]="{'invalid': submitted && f['name'].errors?.['required']}"/>
     <ng-container [ngTemplateOutlet]="errorTpl" [ngTemplateOutletContext]="{$implicit: 'name'}"></ng-container>
   </div>
 
@@ -19,7 +19,7 @@
       <label for="email">{{ 'email' | translate }}*</label>
       <input pInputText fluid="true" id="email" type="email" formControlName="email"
              [placeholder]="'yourMail' | translate"
-             [ngClass]="{'invalid': submitted && f['email']?.errors?.['required']}"/>
+             [ngClass]="{'invalid': submitted && f['email'].errors?.['required']}"/>
       <ng-container [ngTemplateOutlet]="errorTpl" [ngTemplateOutletContext]="{$implicit: 'email'}"></ng-container>
     </div>
 
