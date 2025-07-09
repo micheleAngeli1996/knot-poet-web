@@ -18,16 +18,30 @@
         "destination": "/index.html"
       },
       {
-        "source": "/sendMail",
+        "source": "/sendMailToSubscribersForNews",
         "function": {
-          "functionId": "sendMail",
+          "functionId": "sendMailToSubscribersForNews",
           "region": "europe-west1"
         }
       },
       {
-        "source": "/unsubscribe",
+        "source": "/api/sendMailNewSubscriber",
+        "function": {
+          "functionId": "sendMailNewSubscriber",
+          "region": "europe-west1"
+        }
+      },
+      {
+        "source": "/api/unsubscribe",
         "function": {
           "functionId": "unsubscribe",
+          "region": "europe-west1"
+        }
+      },
+      {
+        "source": "/api/timestamp",
+        "function": {
+          "functionId": "timestamp",
           "region": "europe-west1"
         }
       }

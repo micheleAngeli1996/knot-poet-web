@@ -56,5 +56,8 @@
   "newsSubtitle": "Latest updates, thoughts, and releases",
   "subscribeFormTitle": "Connect",
   "subscribeFormSubtitle": "Sign up below to get the latest Knot Poet updates",
-  "messageAgreement": "BY PROVIDING MY PHONE NUMBER ABOVE, I AGREE THAT I AM 13+ AND AGREE TO RECEIVE RECURRING MESSAGES VIA SMS OR WHATSAPP FROM OR ON BEHALF OF KNOT POET, AND I AGREE TO THE COMMUNITY TERMS AND CONDITIONS <a href=\"https://www.community.com/legal/terms\" target=\"_blank\">TERMS</a>/<a href=\"https://www.community.com/legal/privacy-policy\" target=\"_blank\">PRIVACY</a>. MESSAGE FREQUENCY VARY. CONSENT IS NOT A CONDITION OF PURCHASE. MESSAGE AND DATA RATES APPLY. CLICK ON THE MESSAGE FOR SUPPORT, CLICK ON THE MESSAGE TO UNSUBSCRIBE."
+  "agreement": "BY PROVIDING MY PHONE NUMBER ABOVE, I AGREE THAT I AM 13+ AND AGREE TO RECEIVE RECURRING MESSAGES VIA SMS OR WHATSAPP FROM OR ON BEHALF OF KNOT POET, AND I AGREE TO THE COMMUNITY TERMS AND CONDITIONS <a href=\"https://www.community.com/legal/terms\" target=\"_blank\">TERMS</a>/<a href=\"https://www.community.com/legal/privacy-policy\" target=\"_blank\">PRIVACY</a>. MESSAGE FREQUENCY VARY. CONSENT IS NOT A CONDITION OF PURCHASE. MESSAGE AND DATA RATES APPLY. CLICK ON THE MESSAGE FOR SUPPORT, CLICK ON THE MESSAGE TO UNSUBSCRIBE.",
+  "subscribedOk": "Thanks for your subscription",
+  "subscribedKo": "Thanks for subscribing!",
+  "subscription": "Subscription"
 }

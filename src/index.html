@@ -17,6 +17,19 @@
   })(window, document, 'script', 'dataLayer', 'GTM-NWVWPN3H');</script>
   <!-- End Google Tag Manager -->
 
+  <!--reCAPTCHA-->
+  <!--<script src="https://www.google.com/recaptcha/enterprise.js?render=6LfIS30rAAAAAHcwFWee5fwMsl9PcsAl7CQHIZEU"></script>
+
+  <script>
+    function onClick(e) {
+      e.preventDefault();
+      grecaptcha.enterprise.ready(async () => {
+        const token = await grecaptcha.enterprise.execute('6LfIS30rAAAAAHcwFWee5fwMsl9PcsAl7CQHIZEU', {action: 'SUBSCRIPTION'});
+      });
+    }
+    TODO: Finire configurazione reCAPTCHA al link https://console.cloud.google.com/security/recaptcha/6LfIS30rAAAAAHcwFWee5fwMsl9PcsAl7CQHIZEU/integration?project=knotpoet-d351b&inv=1&invt=Ab2Ssw
+  </script>-->
+
   <meta charset="utf-8">
   <title>Knot Poet - Sito Ufficiale | Musica, News e Concerti</title>
   <base href="/">

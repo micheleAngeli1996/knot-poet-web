@@ -15,7 +15,7 @@
 }
 
 .subscribe-form-container {
-  position: absolute;
+  position: fixed;
   bottom: 45px;
   right: 10px;
   filter: drop-shadow(0 0 5px #ff00ff) !important;

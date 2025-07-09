@@ -10,6 +10,7 @@ import {BreakpointService} from '../../services/breakpoint.service';
 import {MessageService} from 'primeng/api';
 import {SubscribeForm} from '../../models/Subcription';
 import {DynamicDialogRef} from 'primeng/dynamicdialog';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-subscribe-form',
@@ -30,6 +31,7 @@ export class SubscribeFormComponent {
   private breakpointService = inject(BreakpointService);
   private messageService = inject(MessageService);
   private translateService = inject(TranslateService);
+  private http = inject(HttpClient);
   public dynamicDialogRef = inject(DynamicDialogRef);
 
   subscribeForm: FormGroup = new FormGroup({
@@ -39,7 +41,7 @@ export class SubscribeFormComponent {
     city: new FormControl(''),
     state: new FormControl(''),
     country: new FormControl(''),
-    messageAgreement: new FormControl(false)
+    agreement: new FormControl(false)
   });
 
   submitted = false;
@@ -53,17 +55,49 @@ export class SubscribeFormComponent {
     try {
       const resp = await this.subscribeService.addSubscriber(this.subscribeForm.value as SubscribeForm);
       if (resp.id) {
-        this.messageService.add({severity: 'success', detail: this.translateService.instant('subscribedOk')});
+        this.messageService.add({
+          severity: 'success',
+          summary: 'subscription',
+          detail: this.translateService.instant('subscribedOk')
+        });
         this.subscribeForm.reset();
+        this.subscribeService.getSubscriber(resp.id).subscribe(subscriber => {
+          if (subscriber?.subscriptionToken) {
+            this.sendMailToNewSubscriber(subscriber.subscriptionToken);
+          }
+        });
       } else {
-        this.messageService.add({severity: 'success', detail: this.translateService.instant('subscribedKo')});
+        this.messageService.add({
+          severity: 'error',
+          summary: 'subscription',
+          detail: this.translateService.instant('subscribedKo')
+        });
       }
     } catch (error) {
       console.error('Errore durante la registrazione:', error);
-      this.messageService.add({severity: 'success', detail: this.translateService.instant('subscribedKo')});
+      this.messageService.add({
+        severity: 'error',
+        summary: 'subscription',
+        detail: this.translateService.instant('subscribedKo')
+      });
     } finally {
       this.submitted = false;
+      this.closeDialog();
     }
+  }
+
+  sendMailToNewSubscriber(subscribeToken: string) {
+    this.http.get('https://www.knotpoet.com/api/sendMailNewSubscriber?token=' + subscribeToken).subscribe({
+      next: response => {
+        console.log(response);
+      },
+      error: error => {
+        console.error('Errore durante la registrazione:', error);
+      },
+      complete: () => {
+        console.log('Completato');
+      }
+    });
   }
 
   closeDialog() {

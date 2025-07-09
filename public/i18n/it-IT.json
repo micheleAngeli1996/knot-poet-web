@@ -67,7 +67,8 @@
   "submit": "Invia",
   "subscribeFormTitle": "Collegati",
   "subscribeFormSubtitle": "Iscriviti qui sotto per ricevere gli ultimi aggiornamenti sui Knot Poet",
-  "messageAgreement": "FORNENDO IL MIO NUMERO DI TELEFONO SOPRA, ACCETTO DI AVERE PIÙ DI 13 ANNI E ACCONSENTO A RICEVERE MESSAGGI RICORRENTI VIA SMS O WHATSAPP DA O PER CONTO DI KNOT POET, E ACCETTO I TERMINI E CONDIZIONI DELLA COMUNITÀ <a href=\"https://www.community.com/legal/terms\" target=\"_blank\">TERMS</a>/<a href=\"https://www.community.com/legal/privacy-policy\" target=\"_blank\">PRIVACY</a>.LA FREQUENZA DEI MESSAGGI VARIA. IL CONSENSO NON È UNA CONDIZIONE PER L'ACQUISTO. SI APPLICANO TARIFFE PER MESSAGGI E DATI. CLICCA SUL MESSAGGIO PER RICEVERE ASSISTENZA, CLICCA SUL MESSAGGIO PER ESCLUDERE L'ISCRIZIONE.",
+  "agreement": "FORNENDO IL MIO NUMERO DI TELEFONO SOPRA, ACCETTO DI AVERE PIÙ DI 13 ANNI E ACCONSENTO A RICEVERE MESSAGGI RICORRENTI VIA SMS O WHATSAPP DA O PER CONTO DI KNOT POET, E ACCETTO I TERMINI E CONDIZIONI DELLA COMUNITÀ <a href=\"https://www.community.com/legal/terms\" target=\"_blank\">TERMS</a>/<a href=\"https://www.community.com/legal/privacy-policy\" target=\"_blank\">PRIVACY</a>.LA FREQUENZA DEI MESSAGGI VARIA. IL CONSENSO NON È UNA CONDIZIONE PER L'ACQUISTO. SI APPLICANO TARIFFE PER MESSAGGI E DATI. CLICCA SUL MESSAGGIO PER RICEVERE ASSISTENZA, CLICCA SUL MESSAGGIO PER ESCLUDERE L'ISCRIZIONE.",
   "subscribedOk": "Grazie per esserti iscritto!",
-  "subscribedKo": "Si è verificato un errore, riprova più tardi."
+  "subscribedKo": "Si è verificato un errore, riprova più tardi.",
+  "subscription": "Iscrizione"
 }
