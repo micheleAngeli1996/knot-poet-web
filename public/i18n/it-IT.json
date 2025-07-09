@@ -11,6 +11,15 @@
   "name": "Nome",
   "instrument": "Strumento",
   "email": "Email",
+  "city": "Città",
+  "state": "Provincia",
+  "country": "Paese",
+  "yourName": "Il tuo nome",
+  "yourPhone": "Numero di telefono",
+  "yourMail": "your@mail.com",
+  "yourCity": "La tua città",
+  "yourState": "La tua provincia",
+  "yourCountry": "Il tuo paese",
   "emailToReplay": "Email",
   "message": "Messaggio",
   "send": "Invia",
@@ -41,15 +50,24 @@
   "echoes": {
     "shortDescription": "Il groove della galassia",
     "description": "Bassista progressista. Suonare il basso l'ha reso pelato",
-    "longDescription": "<p>Echoes non ha scelto la vita da bassista—è la vita da bassista ad aver scelto lui. Con dita più veloci della luce e un groove capace di riallineare i pianeti, porta un tocco cosmico alle fondamenta pesanti dei Knot Poet.</p>  <p>Influenzato da prog, funk e jazz, Echoes fonde gli stili con eleganza ed aggressività. La leggenda narra che ogni suo slap risuoni attraverso le dimensioni.</p>  <p>E sì, la calvizie è un segno di dedizione: ogni capello perso, un groove guadagnato.</p>"},
+    "longDescription": "<p>Echoes non ha scelto la vita da bassista—è la vita da bassista ad aver scelto lui. Con dita più veloci della luce e un groove capace di riallineare i pianeti, porta un tocco cosmico alle fondamenta pesanti dei Knot Poet.</p>  <p>Influenzato da prog, funk e jazz, Echoes fonde gli stili con eleganza ed aggressività. La leggenda narra che ogni suo slap risuoni attraverso le dimensioni.</p>  <p>E sì, la calvizie è un segno di dedizione: ogni capello perso, un groove guadagnato.</p>"
+  },
   "fede": {
     "shortDescription": "La sua bandana è leggenda",
     "description": "Fede, il batterista di tutti: parla poco e picchia tanto. Sì, anche a letto mette la bandana",
-    "longDescription": "<p>Fede è emerso dal caos di piatti e tom con un unico scopo: assicurarsi che nessuno stesse mai fermo. Noto per la sua energia incessante e la sua mitica bandana, è il cuore pulsante della band.</p> <p>Non perde tempo con le parole: le sue doppie calciature dicono tutto. Che sia in studio o sul palco, Fede sprigiona pura potenza percussiva con precisione millimetrica.</p>"  },
+    "longDescription": "<p>Fede è emerso dal caos di piatti e tom con un unico scopo: assicurarsi che nessuno stesse mai fermo. Noto per la sua energia incessante e la sua mitica bandana, è il cuore pulsante della band.</p> <p>Non perde tempo con le parole: le sue doppie calciature dicono tutto. Che sia in studio o sul palco, Fede sprigiona pura potenza percussiva con precisione millimetrica.</p>"
+  },
   "contactDivider": "Oppure",
   "directContact": "Vuoi un contatto diretto?",
   "followUs": "Seguici sui canali social",
   "pageNotFound": "Oops… Questa pagina non esiste.",
   "backToHome": "Torna alla home",
-  "newsSubtitle": "Ultimi aggiornamenti, pensieri e pubblicazioni"
+  "newsSubtitle": "Ultimi aggiornamenti, pensieri e pubblicazioni",
+  "subscribe": "Iscriviti",
+  "submit": "Invia",
+  "subscribeFormTitle": "Collegati",
+  "subscribeFormSubtitle": "Iscriviti qui sotto per ricevere gli ultimi aggiornamenti sui Knot Poet",
+  "messageAgreement": "FORNENDO IL MIO NUMERO DI TELEFONO SOPRA, ACCETTO DI AVERE PIÙ DI 13 ANNI E ACCONSENTO A RICEVERE MESSAGGI RICORRENTI VIA SMS O WHATSAPP DA O PER CONTO DI KNOT POET, E ACCETTO I TERMINI E CONDIZIONI DELLA COMUNITÀ <a href=\"https://www.community.com/legal/terms\" target=\"_blank\">TERMS</a>/<a href=\"https://www.community.com/legal/privacy-policy\" target=\"_blank\">PRIVACY</a>.LA FREQUENZA DEI MESSAGGI VARIA. IL CONSENSO NON È UNA CONDIZIONE PER L'ACQUISTO. SI APPLICANO TARIFFE PER MESSAGGI E DATI. CLICCA SUL MESSAGGIO PER RICEVERE ASSISTENZA, CLICCA SUL MESSAGGIO PER ESCLUDERE L'ISCRIZIONE.",
+  "subscribedOk": "Grazie per esserti iscritto!",
+  "subscribedKo": "Si è verificato un errore, riprova più tardi."
 }

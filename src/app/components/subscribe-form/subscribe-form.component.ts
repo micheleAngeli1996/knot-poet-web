@@ -1,46 +1,80 @@
 import {Component, inject} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {SubscribeService} from '../../services/subscribe.service';
-import {TranslatePipe} from '@ngx-translate/core';
+import {TranslatePipe, TranslateService} from '@ngx-translate/core';
+import {InputText} from 'primeng/inputtext';
+import {Button} from 'primeng/button';
+import {NgClass, NgTemplateOutlet} from '@angular/common';
+import {Checkbox} from 'primeng/checkbox';
+import {BreakpointService} from '../../services/breakpoint.service';
+import {MessageService} from 'primeng/api';
+import {SubscribeForm} from '../../models/Subcription';
+import {DynamicDialogRef} from 'primeng/dynamicdialog';
 
 @Component({
   selector: 'app-subscribe-form',
   templateUrl: './subscribe-form.component.html',
   imports: [
     ReactiveFormsModule,
-    TranslatePipe
+    TranslatePipe,
+    InputText,
+    Button,
+    NgTemplateOutlet,
+    Checkbox,
+    NgClass
   ],
   styleUrls: ['./subscribe-form.component.css']
 })
 export class SubscribeFormComponent {
   private subscribeService = inject(SubscribeService);
+  private breakpointService = inject(BreakpointService);
+  private messageService = inject(MessageService);
+  private translateService = inject(TranslateService);
+  public dynamicDialogRef = inject(DynamicDialogRef);
 
   subscribeForm: FormGroup = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email])
+    name: new FormControl('', [Validators.required]),
+    phone: new FormControl('', /*[Validators.required, Validators.pattern('[0-9]{3}-[0-9]{3}-[0-9]{4}')]*/),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    city: new FormControl(''),
+    state: new FormControl(''),
+    country: new FormControl(''),
+    messageAgreement: new FormControl(false)
   });
+
   submitted = false;
-  successMessage = '';
-  errorMessage = '';
 
   async onSubmit() {
-    this.submitted = false;
-    this.errorMessage = '';
-    this.successMessage = '';
-
+    this.submitted = true;
     if (this.subscribeForm.invalid) {
       return;
     }
 
     try {
-      this.submitted = true;
-      const email = this.subscribeForm.value.email;
-      await this.subscribeService.addSubscriber(email);
-      this.successMessage = 'Grazie per esserti iscritto!';
-      this.subscribeForm.reset();
-      this.submitted = false;
+      const resp = await this.subscribeService.addSubscriber(this.subscribeForm.value as SubscribeForm);
+      if (resp.id) {
+        this.messageService.add({severity: 'success', detail: this.translateService.instant('subscribedOk')});
+        this.subscribeForm.reset();
+      } else {
+        this.messageService.add({severity: 'success', detail: this.translateService.instant('subscribedKo')});
+      }
     } catch (error) {
       console.error('Errore durante la registrazione:', error);
-      this.errorMessage = 'Si è verificato un errore, riprova più tardi.';
+      this.messageService.add({severity: 'success', detail: this.translateService.instant('subscribedKo')});
+    } finally {
+      this.submitted = false;
     }
+  }
+
+  closeDialog() {
+    this.dynamicDialogRef.close();
+  }
+
+  get f() {
+    return this.subscribeForm.controls;
+  }
+
+  get isPortraitOrientation() {
+    return this.breakpointService.isPortraitOrientation();
   }
 }

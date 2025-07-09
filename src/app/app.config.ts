@@ -17,6 +17,8 @@ import localeIt from '@angular/common/locales/it';
 import {registerLocaleData} from '@angular/common';
 import {getFunctions, provideFunctions} from '@angular/fire/functions';
 import {environment} from '../environments/environment';
+import {MessageService} from 'primeng/api';
+import {DialogService} from 'primeng/dynamicdialog';
 
 registerLocaleData(localeIt);
 
@@ -42,17 +44,18 @@ export const appConfig: ApplicationConfig = {
       defaultLanguage: navigator.language || 'en-EN'
     })]),
     provideFirebaseApp(() => initializeApp(environment.FIREBASE_CONFIG)),
-      provideFirestore(() => getFirestore()),
-      provideFunctions(() => getFunctions()),
-      provideHttpClient(withInterceptorsFromDi()),
-      providePrimeNG({
-        ripple: false,
-        theme: {
-          preset: kpPreset,
-          options: {
-            darkModeSelector: '.app-dark'
-          }
+    provideFirestore(() => getFirestore()),
+    provideFunctions(() => getFunctions()),
+    provideHttpClient(withInterceptorsFromDi()),
+    providePrimeNG({
+      ripple: false,
+      theme: {
+        preset: kpPreset,
+        options: {
+          darkModeSelector: '.app-dark'
         }
-      })
+      }
+    }),
+    MessageService, DialogService
   ]
 };

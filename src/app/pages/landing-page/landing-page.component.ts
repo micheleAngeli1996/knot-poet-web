@@ -1,12 +1,11 @@
 import {Component, inject, OnInit} from '@angular/core';
-import {ButtonModule} from 'primeng/button';
 import {BreakpointService} from '../../services/breakpoint.service';
 import {NgStyle} from '@angular/common';
 import {SEOService} from '../../services/seo.service';
 
 @Component({
   selector: 'landing-page',
-  imports: [ButtonModule, NgStyle],
+  imports: [NgStyle],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css',
 })

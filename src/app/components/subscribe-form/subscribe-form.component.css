@@ -1,0 +1,16 @@
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+h4 {
+  margin-top: 0;
+}
+
+.invalid {
+  border-color: red;
+  color: red;
+}
