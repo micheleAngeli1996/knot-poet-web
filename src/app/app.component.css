@@ -14,13 +14,6 @@
   background-repeat: repeat-y;
 }
 
-.subscribe-form-container {
-  position: fixed;
-  bottom: 45px;
-  right: 10px;
-  filter: drop-shadow(0 0 5px #ff00ff) !important;
-}
-
 .layout-header {
   position: fixed;
   width: 100%;

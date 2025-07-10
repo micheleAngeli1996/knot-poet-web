@@ -1,63 +1,68 @@
-<div class="flex align-items-center justify-content-between">
-  <div class="flex-grow">
-    <h2>{{ 'subscribeFormTitle' | translate }}</h2>
+<div class="form-header">
+  <div class="flex align-items-center justify-content-between filter-text">
+    <div class="flex-grow">
+      <h2>{{ 'subscribeFormTitle' | translate }}</h2>
+    </div>
+    <p-button text="true" icon="pi pi-times" rounded="true" (click)="closeDialog()"></p-button>
   </div>
-  <p-button text="true" icon="pi pi-times" rounded="true" (click)="closeDialog()"></p-button>
+  <h4>{{ 'subscribeFormSubtitle' | translate }}</h4>
 </div>
-<h4>{{ 'subscribeFormSubtitle' | translate }}</h4>
 
-<form [formGroup]="subscribeForm" (ngSubmit)="onSubmit()" class="subscribe-form">
-  <div class="flex flex-col gap-1">
-    <label for="name">{{ 'name' | translate }}*</label>
-    <input pInputText fluid="true" id="name" formControlName="name" [placeholder]="'yourName' | translate"
-           [ngClass]="{'invalid': submitted && f['name'].errors?.['required']}"/>
-    <ng-container [ngTemplateOutlet]="errorTpl" [ngTemplateOutletContext]="{$implicit: 'name'}"></ng-container>
-  </div>
-
-  <div class="flex gap-2" [ngClass]="{'flex-wrap': isPortraitOrientation}">
-    <div class="flex flex-col gap-1 width-full">
-      <label for="email">{{ 'email' | translate }}*</label>
-      <input pInputText fluid="true" id="email" type="email" formControlName="email"
-             [placeholder]="'yourMail' | translate"
-             [ngClass]="{'invalid': submitted && f['email'].errors?.['required']}"/>
-      <ng-container [ngTemplateOutlet]="errorTpl" [ngTemplateOutletContext]="{$implicit: 'email'}"></ng-container>
+<form [formGroup]="subscribeForm" (ngSubmit)="onSubmit()">
+  <div class="form-content">
+    <div class="flex flex-col gap-1">
+      <label for="name">{{ 'name' | translate }}*</label>
+      <input pInputText fluid="true" id="name" formControlName="name" [placeholder]="'yourName' | translate"
+             [ngClass]="{'invalid': submitted && f['name'].errors?.['required']}"/>
+      <ng-container [ngTemplateOutlet]="errorTpl" [ngTemplateOutletContext]="{$implicit: 'name'}"></ng-container>
     </div>
 
-    <div class="flex flex-col gap-1 width-full">
-      <label for="phone">{{ 'phone' | translate }}</label>
-      <input pInputText fluid="true" id="phone" type="tel" formControlName="phone"
-             [placeholder]="'yourPhone' | translate"/>
-      <ng-container [ngTemplateOutlet]="errorTpl" [ngTemplateOutletContext]="{$implicit: 'phone'}"></ng-container>
+    <div class="flex gap-2" [ngClass]="{'flex-wrap': isPortraitOrientation}">
+      <div class="flex flex-col gap-1 width-full">
+        <label for="email">{{ 'email' | translate }}*</label>
+        <input pInputText fluid="true" id="email" type="email" formControlName="email"
+               [placeholder]="'yourMail' | translate"
+               [ngClass]="{'invalid': submitted && f['email'].errors?.['required']}"/>
+        <ng-container [ngTemplateOutlet]="errorTpl" [ngTemplateOutletContext]="{$implicit: 'email'}"></ng-container>
+      </div>
+
+      <div class="flex flex-col gap-1 width-full">
+        <label for="phone">{{ 'phone' | translate }}</label>
+        <input pInputText fluid="true" id="phone" type="tel" formControlName="phone"
+               [placeholder]="'yourPhone' | translate"/>
+        <ng-container [ngTemplateOutlet]="errorTpl" [ngTemplateOutletContext]="{$implicit: 'phone'}"></ng-container>
+      </div>
+    </div>
+
+    <div class="flex gap-2" [ngClass]="{'flex-wrap': isPortraitOrientation}">
+      <div class="flex flex-col gap-1 width-full">
+        <label for="city">{{ 'city' | translate }}</label>
+        <input pInputText fluid="true" id="city" formControlName="city" [placeholder]="'yourCity' | translate"/>
+        <ng-container [ngTemplateOutlet]="errorTpl" [ngTemplateOutletContext]="{$implicit: 'city'}"></ng-container>
+      </div>
+
+      <div class="flex flex-col gap-1 width-full">
+        <label for="state">{{ 'state' | translate }}</label>
+        <input pInputText fluid="true" id="state" formControlName="state" [placeholder]="'yourState' | translate"/>
+        <ng-container [ngTemplateOutlet]="errorTpl" [ngTemplateOutletContext]="{$implicit: 'state'}"></ng-container>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <label for="country">{{ 'country' | translate }}</label>
+      <input pInputText fluid="true" id="country" formControlName="country"
+             [placeholder]="'yourCountry' | translate"/>
+      <ng-container [ngTemplateOutlet]="errorTpl" [ngTemplateOutletContext]="{$implicit: 'country'}"></ng-container>
+    </div>
+
+    <div class="flex">
+      <p-checkbox formControlName="agreement" inputId="agreement" [binary]="true"/>
+      <label for="agreement" class="ml-1 x-small-text"
+             [innerHTML]="'agreement' | translate"></label>
     </div>
   </div>
 
-  <div class="flex gap-2" [ngClass]="{'flex-wrap': isPortraitOrientation}">
-    <div class="flex flex-col gap-1 width-full">
-      <label for="city">{{ 'city' | translate }}</label>
-      <input pInputText fluid="true" id="city" formControlName="city" [placeholder]="'yourCity' | translate"/>
-      <ng-container [ngTemplateOutlet]="errorTpl" [ngTemplateOutletContext]="{$implicit: 'city'}"></ng-container>
-    </div>
-
-    <div class="flex flex-col gap-1 width-full">
-      <label for="state">{{ 'state' | translate }}</label>
-      <input pInputText fluid="true" id="state" formControlName="state" [placeholder]="'yourState' | translate"/>
-      <ng-container [ngTemplateOutlet]="errorTpl" [ngTemplateOutletContext]="{$implicit: 'state'}"></ng-container>
-    </div>
-  </div>
-
-  <div class="flex flex-col gap-1">
-    <label for="country">{{ 'country' | translate }}</label>
-    <input pInputText fluid="true" id="country" formControlName="country" [placeholder]="'yourCountry' | translate"/>
-    <ng-container [ngTemplateOutlet]="errorTpl" [ngTemplateOutletContext]="{$implicit: 'country'}"></ng-container>
-  </div>
-
-  <div class="flex">
-    <p-checkbox formControlName="agreement" inputId="agreement" [binary]="true"/>
-    <label for="agreement" class="ml-1 x-small-text"
-           [innerHTML]="'agreement' | translate"></label>
-  </div>
-
-  <div class="flex justify-content-end">
+  <div class="flex justify-content-end form-footer">
     <p-button type="submit" severity="primary" [label]="'submit' | translate"></p-button>
   </div>
 </form>

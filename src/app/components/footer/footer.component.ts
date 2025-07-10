@@ -3,21 +3,26 @@ import {ButtonModule} from 'primeng/button';
 import {Router} from '@angular/router';
 import {MenuModule} from 'primeng/menu';
 import {MenuItem, MenuItemCommandEvent} from 'primeng/api';
-import {TranslateService} from '@ngx-translate/core';
+import {TranslatePipe, TranslateService} from '@ngx-translate/core';
 import {SlicePipe} from '@angular/common';
+import {SubscribeFormComponent} from '../subscribe-form/subscribe-form.component';
+import {DialogService, DynamicDialogRef} from 'primeng/dynamicdialog';
 
 @Component({
   selector: 'footer',
-  imports: [ButtonModule, MenuModule, SlicePipe],
+  imports: [ButtonModule, MenuModule, SlicePipe, TranslatePipe],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
   private router = inject(Router);
   private translateService = inject(TranslateService);
+  private dialogService = inject(DialogService);
+
+  dynamicDialogRef: DynamicDialogRef<SubscribeFormComponent> | undefined;
+
   flagIcon = '';
   languageIndex: number = 0;
-
   languagesItems: MenuItem[] = [
     {id: 'en-EN', label: 'English', command: this.changeLang.bind(this)},
     {id: 'it-IT', label: 'Italian', command: this.changeLang.bind(this)}
@@ -43,5 +48,14 @@ export class FooterComponent {
     );
 
     window.open(url, '_blank');
+  }
+
+  openSubscribeForm() {
+    this.dynamicDialogRef = this.dialogService.open(SubscribeFormComponent, {
+      showHeader: false,
+      modal: true,
+      width: '70%',
+      closeOnEscape: true
+    });
   }
 }

@@ -7,14 +7,10 @@ import {NgStyle} from '@angular/common';
 import {BreakpointService} from './services/breakpoint.service';
 import {filter} from 'rxjs';
 import {Platform} from '@angular/cdk/platform';
-import {TranslatePipe} from '@ngx-translate/core';
-import {Button} from 'primeng/button';
-import {DialogService, DynamicDialogRef} from 'primeng/dynamicdialog';
-import {SubscribeFormComponent} from './components/subscribe-form/subscribe-form.component';
 
 @Component({
   selector: 'root',
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, Toast, NgStyle, TranslatePipe, Button],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, Toast, NgStyle],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -22,13 +18,11 @@ export class AppComponent implements AfterViewInit {
   private router = inject(Router);
   private breakpointService = inject(BreakpointService);
   private platform = inject(Platform);
-  private dialogService = inject(DialogService);
 
   title = 'knot-poet-website';
   style = {
     'background-image': 'radial-gradient(circle at center center,rgb(0 0 0), rgb(0 0 0 / 0%)), url(' + this.backgroundImage + ')'
   };
-  dynamicDialogRef: DynamicDialogRef<SubscribeFormComponent> | undefined;
 
   constructor() {
     this.router.events.pipe(filter(e => e.type === EventType.NavigationEnd)).subscribe(e => {
@@ -45,15 +39,6 @@ export class AppComponent implements AfterViewInit {
     if (this.platform.IOS || this.platform.ANDROID) {
       document.querySelector('.container')?.classList.add('mobile-container');
     }
-  }
-
-  openSubscribeForm() {
-    this.dynamicDialogRef = this.dialogService.open(SubscribeFormComponent, {
-      showHeader: false,
-      modal: true,
-      width: '70%',
-      closeOnEscape: true
-    });
   }
 
   get combinedStyles(): { [key: string]: string } {
