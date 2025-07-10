@@ -44,7 +44,6 @@ export class AppComponent implements AfterViewInit {
   get combinedStyles(): { [key: string]: string } {
     const styles: { [key: string]: string } = {...this.style};
     styles['background-size'] = !this.isPortraitOrientation ? '100% 100%' : '';
-
     return styles;
   }
 

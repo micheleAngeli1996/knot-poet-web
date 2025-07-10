@@ -1,17 +1,8 @@
-.form-content {
+.subscribe-form {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 2rem;
-}
-
-.filter-text, h4 {
-  filter: drop-shadow(0 0 5px #ff00ff);
-}
-
-h4 {
-  margin-top: 0;
 }
 
 .invalid {

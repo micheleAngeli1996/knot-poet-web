@@ -7,9 +7,13 @@
   @for (newArticle of news$ | async; track newArticle.id) {
     @let newArticleTr = newArticle[lang] || {};
     <article>
-      <h2>{{ newArticleTr.title }}</h2>
-      <span class="time">{{ newArticle.date | date:'mediumDate':undefined:translateService.defaultLang }}</span>
-      <p>{{ newArticleTr.content }}</p>
+      <div class="flex align-items-center justify-content-between">
+        <h2>{{ newArticleTr.title }}</h2>
+        <p-button (onClick)="goToNewsDetail(newArticle.id!)" size="small"
+                  icon="pi pi-arrow-right" text="true" rounded="true"></p-button>
+      </div>
+      <span class="time">{{ newArticle.date | date:'mediumDate':undefined:lang }}</span>
+      <p>{{ newArticleTr.shortContent }}</p>
     </article>
   }
 </div>

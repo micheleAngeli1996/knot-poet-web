@@ -7,6 +7,10 @@
   gap: 0.3rem;
 }
 
+:host(::ng-deep .custom-footer-button .p-button-label) {
+  color: #ABABAB;
+}
+
 a {
   text-decoration: none;
 }
@@ -27,7 +31,20 @@ a:hover {
   display: inline-block;
 }
 
-:host(::ng-deep .p-button),
-:host(::ng-deep .p-menu-item-content > .p-button){
+h4 {
+  margin-top: 0;
+}
+
+:host(::ng-deep .custom-footer-button .p-button),
+:host(::ng-deep .custom-footer-button .p-menu-item-content > .p-button) {
   padding: 0 !important;
+}
+
+:host(::ng-deep .p-dialog-header) {
+  padding: 0 var(--p-dialog-header-padding) !important;
+  align-items: start;
+}
+
+:host(::ng-deep .p-dialog-header-actions) {
+  margin-top: 0.83rem !important;
 }

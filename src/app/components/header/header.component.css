@@ -1,12 +1,17 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0.5rem 0;
 }
 
 .menu-button {
   margin-right: 1rem;
+}
+
+.logo-btn {
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
 }
 
 :host(::ng-deep .p-button) {

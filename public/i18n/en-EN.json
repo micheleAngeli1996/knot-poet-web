@@ -1,16 +1,25 @@
 {
   "home": "Home",
-  "about": "About",
+  "about": "About Us",
   "members": "Members",
   "contact": "Contact",
   "news": "News",
-  "contactTitle": "Contact us!",
-  "contactUsAnytime": "You can reach out to us anytime! We're open to compliments, advice, gentle insults, and much more!",
-  "contactUs": "Write to us, we'll reply!",
+  "contactTitle": "Get in touch!",
+  "contactUsAnytime": "Feel free to contact us anytime! We're open to praise, advice, polite insults, and much more!",
+  "contactUs": "Write to us, we'll get back to you!",
   "age": "Age",
   "name": "Name",
   "instrument": "Instrument",
   "email": "Email",
+  "city": "City",
+  "state": "State",
+  "country": "Country",
+  "yourName": "Your name",
+  "yourPhone": "Phone number",
+  "yourMail": "your@mail.com",
+  "yourCity": "Your city",
+  "yourState": "Your state",
+  "yourCountry": "Your country",
   "emailToReplay": "Email",
   "message": "Message",
   "send": "Send",
@@ -22,42 +31,44 @@
   "drum": "Drums",
   "bass": "Bass",
   "aboutTitle": "A fusion of poetic and aggressive sound",
-  "bandDescription": "Knot Poet was born from the fusion of dreamlike sounds and metal atmospheres.<br /> Each song is a journey into the subconscious, guided by evocative lyrics and powerful arrangements.",
+  "bandDescription": "Knot Poet was born from the fusion of dreamlike sounds and metal atmospheres. <br /> Each song is a journey into the subconscious, guided by evocative lyrics and powerful arrangements.",
   "mitch": {
     "shortDescription": "The voice of the band",
-    "description": "Frontman and guitarist, a poetic jack-of-all-trades.",
-    "longDescription": "<p>From his early days in a kindergarten choir to tormenting neighbors with his piercing high notes, Mitch has always been musically possessed. At 15, he joined local bands and started training in secret, plotting sonic vengeance from his bedroom.</p>  <p>At 21, he finally started vocal and guitar lessons—much to the regret of his instructors, who eventually encouraged him to pursue his destructive journey solo. In 2023, he met Francio and Echoes, bonding over their love of metal—power and thrash with Francio, and eclectic metal vibes with Echoes.</p>  <p>Thus, Knot Poet was born, with Mitch at the helm, ready to rupture eardrums across the globe. His motto? <strong>\"Keep the metal ALIVEEEEEEE!!\"</strong></p>"
+    "description": "Frontman, songwriter, and rhythm guitarist: a poet with a megaphone!",
+    "longDescription": "<p>From early days in preschool choir to tormenting neighbors with his high notes, Mitch has always been possessed by music. At 15, he joined a few local bands and began training in secret, plotting sonic revenge from his bedroom.</p> <p>At 21, he finally started taking singing and guitar lessons — much to the dismay of his teachers, who eventually encouraged him to pursue his destructive solo path. In 2023, he met Francio and Echoes, bonding over a shared love of metal: power and thrash with Francio, more eclectic vibes with Echoes.</p> <p>Thus Knot Poet was born, with Mitch at the helm, ready to shatter eardrums across the globe. His motto? <strong>\"Keep the metal ALIVEEEEEEE!!\"</strong></p>"
   },
   "francio": {
     "shortDescription": "The riffman",
-    "description": "Guitarist and band founder, listens to records only he and the recording engineers have heard.",
-    "longDescription": "<p>While others were watching cartoons, Francio was dissecting guitar solos and tracking down obscure vinyl. A true sound archaeologist, he founded Knot Poet with a vision: to fuse poetic atmospheres with face-melting riffs.</p>  <p>Known for his encyclopedic knowledge of underground metal, Francio brings the crunch, the precision, and the headbanging rhythm section that makes walls shake. When he’s not playing, he’s probably digging through forgotten forums for rare demo tapes.</p>  <p>He doesn’t speak much—his riffs do all the talking.</p>"
+    "description": "Guitarist and band founder, listens to records only he and the producers know about",
+    "longDescription": "<p>While others watched cartoons, Francio was analyzing guitar solos and hunting down obscure vinyl. A true sound archaeologist, he founded Knot Poet with a vision: to blend poetic atmospheres with face-melting riffs.</p> <p>Known for his encyclopedic knowledge of underground metal, Francio brings power, precision, and a headbanging rhythm section that shakes walls. When he’s not playing, he’s probably digging through old forums looking for forgotten demos.</p> <p>He doesn't talk much—his riffs say it all.</p>"
   },
   "ingo": {
-    "shortDescription": "From a shadowy past",
-    "description": "A guitarist from the Swiss Alps. Calm exterior, black metal past.",
-    "longDescription": "<p>Raised in the silence of the mountains, Ingo’s calm demeanor hides a turbulent history in underground black metal. He traded frostbitten forests for smoky rehearsal rooms—but kept the darkness in his tone.</p>  <p>When he met the Knot Poet crew, he brought with him haunting melodies, glacial tremolo picking, and an uncanny ability to summon storms with a single chord.</p>  <p>He doesn’t smile much—but when he does, it’s usually after a perfectly executed blast beat.</p>"
+    "shortDescription": "From a dark past",
+    "description": "Guitarist descended from the Swiss Alps. His calm hides a Black Metal past",
+    "longDescription": "<p>Raised in the silence of the mountains, Ingo's calm hides a turbulent past in the underground black metal scene. He traded frozen forests for smoke-filled rehearsal rooms—but kept the darkness in his sound.</p> <p>When he joined the Knot Poet crew, he brought eerie melodies, glacial tremolo picking, and a supernatural ability to summon storms with a single chord.</p> <p>He rarely smiles—but when he does, it’s usually after a flawlessly executed blast beat.</p>"
   },
   "echoes": {
-    "shortDescription": "Groove from another world",
-    "description": "Progressive bassist. Playing bass made him bald.",
-    "longDescription": "<p>Echoes didn’t choose the bass life—the bass life chose him. With fingers faster than light and a groove that could realign planets, he brings a cosmic touch to Knot Poet’s heavy foundation.</p>  <p>Influenced by prog, funk, and jazz, Echoes blends styles with elegance and aggression. Legends say each slap of his strings echoes across dimensions.</p>  <p>And yes, baldness is a sign of dedication: every hair lost, a groove gained.</p>"
+    "shortDescription": "The groove of the galaxy",
+    "description": "Progressive bassist. Playing bass made him bald",
+    "longDescription": "<p>Echoes didn’t choose the bassist life—the bassist life chose him. With fingers faster than light and a groove that can realign planets, he adds a cosmic touch to the heavy foundation of Knot Poet.</p> <p>Influenced by prog, funk, and jazz, Echoes blends styles with elegance and aggression. Legend has it that each of his slaps resonates across dimensions.</p> <p>And yes, baldness is a badge of dedication: each lost hair, a groove gained.</p>"
   },
   "fede": {
-    "shortDescription": "His bandana is legend",
-    "description": "Fede, the drummer of all drummers. Speaks little, hits hard. Yes, he wears the bandana even in bed.",
-    "longDescription": "<p>Fede emerged from the chaos of cymbals and toms with one purpose: to make sure nobody ever sits still. Known for his relentless energy and mythical bandana, he’s the pulse of the band.</p>  <p>He doesn’t waste time on words—his double kicks say it all. Whether in the studio or on stage, Fede delivers pure percussive power with pinpoint precision.</p>"
+    "shortDescription": "His bandana is legendary",
+    "description": "Fede, everyone’s drummer: speaks little, hits hard. Yes, he even wears the bandana in bed",
+    "longDescription": "<p>Fede emerged from the chaos of cymbals and toms with a single mission: to keep everyone moving. Known for his relentless energy and his mythical bandana, he’s the heartbeat of the band.</p> <p>He doesn’t waste time with words: his double kicks say it all. Whether in the studio or on stage, Fede unleashes pure percussive power with surgical precision.</p>"
   },
   "contactDivider": "Or",
-  "directContact": "Want to reach us directly?",
-  "followUs": "Follow us on social media",
-  "pageNotFound": "Oops… This page doesn't exist.",
+  "directContact": "Want a direct contact?",
+  "followUs": "Follow us on social channels",
+  "pageNotFound": "Oops… This page doesn’t exist.",
   "backToHome": "Back to home",
   "newsSubtitle": "Latest updates, thoughts, and releases",
-  "subscribeFormTitle": "Connect",
-  "subscribeFormSubtitle": "Sign up below to get the latest Knot Poet updates",
-  "agreement": "BY PROVIDING MY PHONE NUMBER ABOVE, I AGREE THAT I AM 13+ AND AGREE TO RECEIVE RECURRING MESSAGES VIA SMS OR WHATSAPP FROM OR ON BEHALF OF KNOT POET, AND I AGREE TO THE COMMUNITY TERMS AND CONDITIONS <a href=\"https://www.community.com/legal/terms\" target=\"_blank\">TERMS</a>/<a href=\"https://www.community.com/legal/privacy-policy\" target=\"_blank\">PRIVACY</a>. MESSAGE FREQUENCY VARY. CONSENT IS NOT A CONDITION OF PURCHASE. MESSAGE AND DATA RATES APPLY. CLICK ON THE MESSAGE FOR SUPPORT, CLICK ON THE MESSAGE TO UNSUBSCRIBE.",
-  "subscribedOk": "Thanks for your subscription",
-  "subscribedKo": "Thanks for subscribing!",
+  "subscribe": "Subscribe",
+  "submit": "Submit",
+  "subscribeFormTitle": "Stay connected",
+  "subscribeFormSubtitle": "Sign up below to get the latest updates about Knot Poet",
+  "agreement": "BY PROVIDING MY PHONE NUMBER ABOVE, I CERTIFY THAT I AM OVER 13 YEARS OLD AND CONSENT TO RECEIVE RECURRING MESSAGES VIA SMS OR WHATSAPP FROM OR ON BEHALF OF KNOT POET, AND I AGREE TO THE COMMUNITY <a href=\"https://www.community.com/legal/terms\" target=\"_blank\">TERMS</a>/<a href=\"https://www.community.com/legal/privacy-policy\" target=\"_blank\">PRIVACY</a>. MESSAGE FREQUENCY VARIES. CONSENT IS NOT A CONDITION OF PURCHASE. MESSAGE AND DATA RATES MAY APPLY. CLICK MESSAGE FOR HELP, CLICK MESSAGE TO UNSUBSCRIBE.",
+  "subscribedOk": "Thanks for subscribing!",
+  "subscribedKo": "An error occurred, please try again later.",
   "subscription": "Subscription"
 }

@@ -4,6 +4,8 @@ export type News = {
 } & {
   [lang: string]: {
     title: string,
-    content: string,
+    shortContent: string,
+    longContent: string,
+    image?: string
   }
 }

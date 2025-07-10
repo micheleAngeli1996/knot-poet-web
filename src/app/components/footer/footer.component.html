@@ -1,15 +1,34 @@
-<div class="footer">
+<div class="footer text-muted">
   <p>&copy; 2025 Knot Poet</p>
   <div class="divider"></div>
   <a (click)="goToPrivacyPolicy()">Privacy Policy</a>
   <div class="divider"></div>
-  <p-button [label]="'subscribe' | translate" size="small" text="true" (click)="openSubscribeForm()"></p-button>
+  <p-button [label]="'subscribe' | translate" size="small" text="true" (click)="openSubscribeForm()"
+            class="custom-footer-button"></p-button>
   <div class="divider"></div>
   <p-menu #languagesMenu [model]="languagesItems | slice:(languageIndex-1):(languagesItems.length - languageIndex)"
           [popup]="true" appendTo="body"/>
-  <p-button (click)="languagesMenu.toggle($event)" text="true" rounded="true">
+  <p-button (click)="languagesMenu.toggle($event)" text="true" rounded="true" class="custom-footer-button">
     <span class="flag-icon">
      <img [src]="flagIcon" alt="Language"/>
     </span>
   </p-button>
 </div>
+@if (!isPortraitOrientation) {
+  <div class="flex justify-content-center mb-1">
+    <social-buttons [size]="'small'"></social-buttons>
+  </div>
+}
+
+<p-dialog [(visible)]="showSubscribeForm" [modal]="true" dismissableMask="true" draggable="false" closable="true" [style]="{ width: '70%' }">
+  <ng-template #header>
+    <div class="flex flex-col justify-content-between">
+      <h2 class="filter-text">{{ 'subscribeFormTitle' | translate }}</h2>
+      <h4>{{ 'subscribeFormSubtitle' | translate }}</h4>
+    </div>
+  </ng-template>
+  <subscribe-form [submitted]="submitted"></subscribe-form>
+  <ng-template #footer>
+    <p-button severity="primary" [label]="'submit' | translate" (click)="onSubmit()"></p-button>
+  </ng-template>
+</p-dialog>

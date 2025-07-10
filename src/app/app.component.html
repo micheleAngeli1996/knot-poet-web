@@ -2,7 +2,7 @@
   <div class="layout-header">
     <header></header>
   </div>
-  <main class="layout-content">
+  <main class="layout-content" [ngStyle]="{'margin-bottom': !isPortraitOrientation ? '90px' : '45px'}">
     <router-outlet></router-outlet>
   </main>
   <div class="layout-footer">

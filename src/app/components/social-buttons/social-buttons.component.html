@@ -1,6 +1,6 @@
 <div class="social-buttons">
   @for (socialButton of socialButtons; track socialButton.label) {
-    <p-button [icon]="socialButton.icon" (onClick)="openUrl(socialButton.url)" text="true">
+    <p-button [icon]="socialButton.icon" (onClick)="openUrl(socialButton.url)" text="true" [size]="size()">
       <ng-template #icon>
         <img src="img/icons/social/{{socialButton.label}}.svg" alt="{{ socialButton.label }}" width="24" height="24" loading="lazy">
       </ng-template>

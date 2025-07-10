@@ -6,6 +6,8 @@ import {Observable} from 'rxjs';
 import {CardModule} from 'primeng/card';
 import {TranslatePipe, TranslateService} from '@ngx-translate/core';
 import {SEOService} from '../../services/seo.service';
+import {Button} from 'primeng/button';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'news',
@@ -14,15 +16,19 @@ import {SEOService} from '../../services/seo.service';
     DatePipe,
     CardModule,
     TranslatePipe,
-    TitleCasePipe
+    TitleCasePipe,
+    Button
   ],
   templateUrl: './news.component.html',
   styleUrl: './news.component.css'
 })
 export class NewsComponent implements OnInit {
-  translateService = inject(TranslateService);
+  private translateService = inject(TranslateService);
   private seoService = inject(SEOService);
   private newsService = inject(NewsService);
+  private router = inject(Router);
+  private route = inject(ActivatedRoute);
+
   news$!: Observable<News[]>;
 
   ngOnInit() {
@@ -82,6 +88,10 @@ export class NewsComponent implements OnInit {
     };
 
     this.seoService.updateStructuredData(newsStructuredData);
+  }
+
+  goToNewsDetail(newsId: string) {
+    this.router.navigate(['news', newsId], {relativeTo: this.route.parent});
   }
 
   get lang() {

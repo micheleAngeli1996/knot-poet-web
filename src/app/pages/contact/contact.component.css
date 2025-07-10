@@ -39,10 +39,6 @@ button:hover {
   width: 100%;
 }
 
-.direct-contact {
-  color: var(--p-text-muted-color);
-}
-
 .contact-subtitle {
   padding: 0 3rem;
   text-align: center;

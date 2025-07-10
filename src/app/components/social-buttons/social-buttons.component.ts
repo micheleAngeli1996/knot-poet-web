@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, input} from '@angular/core';
 import {Button} from 'primeng/button';
 import {MenuItem} from 'primeng/api';
 import {TranslateModule} from '@ngx-translate/core';
@@ -11,6 +11,7 @@ import {TranslateModule} from '@ngx-translate/core';
 })
 
 export class SocialButtonsComponent {
+  size = input<'large' | 'small'>('large');
 
   socialButtons: MenuItem[] = [
     {label: 'instagram', url: 'https://www.instagram.com/knotpoet_/'},

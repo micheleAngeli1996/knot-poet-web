@@ -6,6 +6,8 @@ import {TranslateService} from '@ngx-translate/core';
 import {FirestoreService} from './firestore.service';
 import {WithFieldValue} from 'firebase/firestore';
 import {DocumentData} from '@angular/fire/compat/firestore';
+import {FormGroup} from '@angular/forms';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -14,9 +16,60 @@ export class SubscribeService {
   private firestore = inject(Firestore);
   private translateService = inject(TranslateService);
   private firestoreService = inject(FirestoreService);
+  private http = inject(HttpClient);
 
   getSubscriber(subscriberId: string) {
     return this.firestoreService.getDocById<Subscriber>('subscribers', subscriberId);
+  }
+
+  async onSubmit(subscribeForm: FormGroup | undefined) {
+    if (subscribeForm?.invalid) {
+      return {
+        isValid: false,
+        status: ''
+      };
+    }
+
+    try {
+      const resp = await this.addSubscriber(subscribeForm?.value as SubscribeForm);
+      if (resp.id) {
+        subscribeForm?.reset();
+        this.getSubscriber(resp.id).subscribe(subscriber => {
+          if (subscriber?.subscriptionToken) {
+            this.sendMailToNewSubscriber(subscriber.subscriptionToken);
+          }
+        });
+        return {
+          isValid: true,
+          status: 'success'
+        };
+      } else {
+        return {
+          isValid: true,
+          status: 'error'
+        };
+      }
+    } catch (error) {
+      console.error('Errore durante la registrazione:', error);
+      return {
+        isValid: true,
+        status: 'error'
+      };
+    }
+  }
+
+  sendMailToNewSubscriber(subscribeToken: string) {
+    this.http.get('https://www.knotpoet.com/api/sendMailNewSubscriber?token=' + subscribeToken).subscribe({
+      next: response => {
+        console.log(response);
+      },
+      error: error => {
+        console.error('Errore durante la registrazione:', error);
+      },
+      complete: () => {
+        console.log('Completato');
+      }
+    });
   }
 
   async addSubscriber(subscribeForm: SubscribeForm): Promise<DocumentReference> {
